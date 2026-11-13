@@ -19,8 +19,10 @@ git add -A
 git commit -q -m "ayna: $(date -u '+%Y-%m-%d %H:%M UTC')" || {
   echo "!!! commit başarısız — push yok"; exit 1; }
 
-# commit'lenmiş içerikte son bir kez daha sır taraması (git index üzerinden)
-HITS=$(git grep -nIE 'AIza[0-9A-Za-z_-]{35}|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|BEGIN [A-Z ]*PRIVATE KEY|client_secret["'"'"']?[[:space:]]*[:=]' -- . ':!*.jpg' ':!*.png' | head -5)
+# commit'lenmiş yayınlanan içerikte son bir kez daha sır taraması.
+# Yalnız docs/ (GitHub Pages'e giden ağaç) taranır: README ve mirror_site.py
+# desenleri kendi metinlerinde belgeliyor, onları taramak yanlış alarm verir.
+HITS=$(git grep -nIE 'AIza[0-9A-Za-z_-]{35}|sk-[A-Za-z0-9]{20,}|ghp_[A-Za-z0-9]{20,}|BEGIN [A-Z ]*PRIVATE KEY|client_secret["'"'"']?[[:space:]]*[:=]' -- docs ':!docs/*.jpg' ':!docs/*.png' | head -5)
 if [ -n "$HITS" ]; then
   echo "!!! COMMIT ICINDE SIR BENZERI ICERIK — PUSH IPTAL"
   echo "$HITS"
