@@ -41,6 +41,35 @@ Repo public olduğu için `robots.txt` tüm botlara kapalı ve sayfalar
 `mirror.cetinserhat.com` altında `noindex` başlığıyla servis edilir — canlı siteyle
 kopya içerik çakışması olmaz.
 
+## Kurulu yapı (13.11.2026)
+
+| Bileşen | Değer |
+|---|---|
+| Worker script | `cetinserhat-failover` |
+| Route | `cetinserhat.com/*` → `cetinserhat-failover` |
+| Origin (Worker'ın okuduğu) | `https://www.cetinserhat.com` — **route'a DAHİL DEĞİL** (eklenirse sonsuz döngü) |
+| Origin timeout | 4 s · ayna timeout 6 s |
+| Ayna | `mirror.cetinserhat.com` (CNAME → `atomsneak.github.io`, proxied **kapalı**) |
+| Cloudflare zone | `d9d14ac79480496e7f1534e9918849f4` |
+| Account | `4c73dfcbbe0900c58b54cfa21c1cb6d4` |
+
+**Davranış:** origin 5xx/erişilemez → ayna denenir. `/api/*` ve `/admin` **asla** aynadan
+servis edilmez (503). Yazma istekleri (POST) aynaya düşmez, 503 + JSON döner.
+
+**Ölçülmüş test (13.11.2026):** ayrı `failover-test` hostname + ölü origin kopyası ile
+sayfa ve `/assets/` → `200 + x-cetinserhat-mirror: hit`, `/api/posts` ve `/admin` → `503`.
+Test kayıtları silindi.
+
+## Worker'ı güncelleme
+
+Token'da Workers yetkisi yok; güncelleme **panel oturumu üzerinden** yapılır: giriş yapmış
+`dash.cloudflare.com` sekmesinde `fetch('/api/v4/accounts/<ACC>/workers/scripts/cetinserhat-failover',
+{method:'PUT', body: FormData})` — çerez yetkiyi taşır. Alternatif: panel → Workers → servis →
+**Edit code** → yapıştır → Deploy.
+
+**Deploy sonrası mutlaka** `node deploy/test-worker.mjs` (origin-up/down senaryoları) ve
+canlı `curl -sI https://cetinserhat.com/` (byte'lar değişmemeli).
+
 ## Geri alma
 
 Cloudflare panelinde Worker route'unu (`cetinserhat.com/*`) silmek yeterli;
