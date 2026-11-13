@@ -1,0 +1,3 @@
+# Yedek ayna — arama motorlarına kapalı
+User-agent: *
+Disallow: /

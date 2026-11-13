@@ -1,0 +1,890 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="tr"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tüm Gönderiler, Makaleler &amp; Videolar — Serhat Çetin</title>
+<meta name="description" content="Serhat Çetin'in ağ mimarisi, SD-WAN, Telekomünikasyon, YouTube video eğitimleri ve teknik makalelerinin yer aldığı birleşik içerik akışı.">
+<link rel="canonical" href="https://cetinserhat.com/blog">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Serhat Çetin">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:url" content="https://cetinserhat.com/blog">
+<meta property="og:title" content=Tüm Gönderiler, Makaleler &amp; Videolar — Serhat Çetin>
+<meta property="og:description" content=Serhat Çetin&#39;in ağ mimarisi, SD-WAN, Telekomünikasyon, YouTube video eğitimleri ve teknik makalelerinin yer aldığı birleşik içerik akışı.>
+<meta property="og:image" content="https://cetinserhat.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Serhat Çetin blog ve makaleleri">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content=Tüm Gönderiler, Makaleler &amp; Videolar — Serhat Çetin>
+<meta name="twitter:description" content="Ağ mimarisi, SD-WAN, telekomünikasyon ve teknik makaleler.">
+<meta name="twitter:image" content="https://cetinserhat.com/assets/og-image.png">
+<link rel="alternate" hreflang="tr-TR" href="https://cetinserhat.com/blog">
+<link rel="alternate" hreflang="en" href="https://cetinserhat.com/en">
+<link rel="alternate" hreflang="x-default" href="https://cetinserhat.com/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "@id": "https://cetinserhat.com/blog#webpage", "url": "https://cetinserhat.com/blog", "name": "Tüm Gönderiler, Makaleler & Videolar — Serhat Çetin", "description": "Serhat Çetin'in ağ mimarisi, SD-WAN, Telekomünikasyon, YouTube video eğitimleri ve teknik makalelerinin yer aldığı birleşik içerik akışı.", "inLanguage": "tr-TR", "isPartOf": {"@id": "https://cetinserhat.com/#website"}, "about": {"@id": "https://cetinserhat.com/#person"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Anasayfa", "item": "https://cetinserhat.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cetinserhat.com/blog"}]}]}</script>
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/logo-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/logo-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/logo-192.png">
+
+<!-- Google Material Symbols & Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+  }
+  ::-webkit-scrollbar { display: none; }
+  .font-mono-code { font-family: 'JetBrains Mono', monospace; }
+</style>
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "background": "#111317",
+          "bg-slate-base": "#151921",
+          "text-high-contrast": "#f8fafc",
+          "surface-container": "#1e2023",
+          "on-background": "#e2e2e6",
+          "surface-tint": "#7bd0ff",
+          "on-tertiary-fixed": "#001a42",
+          "on-surface-variant": "#bdc8d1",
+          "tertiary-fixed-dim": "#adc6ff",
+          "primary-fixed": "#c4e7ff",
+          "on-error": "#690005",
+          "on-primary-container": "#004965",
+          "surface-bright": "#37393d",
+          "outline-variant": "#3e484f",
+          "on-primary-fixed": "#001e2c",
+          "surface": "#111317",
+          "inverse-primary": "#00668a",
+          "text-muted": "#94a3b8",
+          "primary-fixed-dim": "#7bd0ff",
+          "surface-container-highest": "#333538",
+          "bg-slate-dark": "#0f1217",
+          "on-secondary-container": "#d6e5ff",
+          "on-tertiary-container": "#004190",
+          "tertiary": "#b8cdff",
+          "surface-container-low": "#1b2029",
+          "bg-obsidian-deep": "#090b0e",
+          "primary-container": "#38bdf8",
+          "tertiary-fixed": "#d8e2ff",
+          "glass-highlight": "rgba(56, 189, 248, 0.15)",
+          "on-primary-fixed-variant": "#004c69",
+          "surface-container-high": "#222934",
+          "secondary-fixed": "#d4e3ff",
+          "on-secondary": "#00315d",
+          "outline": "#87929a",
+          "secondary-container": "#0267b8",
+          "on-tertiary": "#002e6a",
+          "on-surface": "#e2e2e6",
+          "inverse-on-surface": "#2f3034",
+          "tertiary-container": "#8cb1ff",
+          "on-primary": "#00283d",
+          "on-secondary-fixed-variant": "#004883",
+          "glass-surface": "rgba(21, 25, 33, 0.70)",
+          "on-tertiary-fixed-variant": "#004395",
+          "error": "#ffb4ab",
+          "surface-container-lowest": "#0c0e11",
+          "secondary": "#a4c9ff",
+          "on-error-container": "#ffdad6",
+          "inverse-surface": "#e2e2e6",
+          "surface-variant": "#333538",
+          "primary": "#38bdf8",
+          "surface-dim": "#111317",
+          "error-container": "#93000a",
+          "on-secondary-fixed": "#001c39",
+          "glass-border": "rgba(248, 250, 252, 0.10)",
+          "secondary-fixed-dim": "#a4c9ff"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "2xl": "1rem",
+          "3xl": "1.5rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "touch-min": "3rem",
+          "space-2xl": "3rem",
+          "space-xl": "2rem",
+          "space-xxs": "0.25rem",
+          "space-md": "1rem",
+          "space-sm": "0.75rem",
+          "gutter-mobile": "1.25rem",
+          "space-xs": "0.5rem",
+          "space-3xl": "4.5rem",
+          "space-5xl": "9rem",
+          "space-lg": "1.5rem",
+          "gutter-desktop": "2.5rem",
+          "space-4xl": "6rem"
+        },
+        fontFamily: {
+          "sans": ["Poppins", "sans-serif"],
+          "headline-lg": ["Poppins", "sans-serif"],
+          "body-md": ["Poppins", "sans-serif"],
+          "display-hero": ["Poppins", "sans-serif"],
+          "body-sm": ["Poppins", "sans-serif"],
+          "caption": ["Poppins", "sans-serif"],
+          "label-md": ["Poppins", "sans-serif"],
+          "headline-lg-mobile": ["Poppins", "sans-serif"],
+          "headline-md": ["Poppins", "sans-serif"],
+          "body-lg": ["Poppins", "sans-serif"],
+          "headline-sm": ["Poppins", "sans-serif"],
+          "display-hero-mobile": ["Poppins", "sans-serif"],
+          "label-lg": ["Poppins", "sans-serif"]
+        },
+        fontSize: {
+          "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+          "body-md": ["16px", {"lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "400"}],
+          "caption": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+          "display-hero": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+          "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+          "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}],
+          "label-md": ["13px", {"lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600"}],
+          "display-hero-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "700"}],
+          "label-lg": ["15px", {"lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600"}]
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="bg-surface-container-lowest font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col">
+
+<!-- Top Navigation Header (Unified) -->
+<header class="fixed top-0 inset-x-0 z-50 bg-gradient-to-b from-[#0e1420]/95 via-[#090b0e]/85 to-[#090b0e]/60 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
+  <div class="h-16 sm:h-20 max-w-[1360px] mx-auto px-3 sm:px-gutter-mobile md:px-gutter-desktop flex items-center justify-between gap-2 sm:gap-space-md">
+    <!-- Brand / Identity -->
+    <a class="flex items-center group gap-2 sm:gap-space-sm min-w-0 shrink" data-path="anasayfa" href="/">
+      <img src="/assets/logo.png" alt="Serhat Çetin Logo" class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg border border-primary/30 shadow-[0_0_12px_#38bdf8] transition-transform duration-300 group-hover:scale-105 shrink-0" onerror="this.src='/assets/logo-96.png'">
+      <span class="font-headline-sm text-sm sm:text-base md:text-headline-sm tracking-tight text-on-surface group-hover:text-primary transition-colors leading-none whitespace-nowrap truncate">Serhat Çetin</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="hidden lg:flex items-center gap-space-xxs p-1.5 bg-[#161b22]/90 border border-white/[0.08] rounded-full" data-active-classes="bg-primary/15 text-primary border border-primary/30 font-label-md rounded-full">
+      <a class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] transition-all" data-path="anasayfa" href="/">Ana Sayfa</a>
+      <a class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] transition-all" data-path="vizyon" href="/#vizyon">Kariyer &amp; Vizyon</a>
+      <a class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] transition-all" data-path="yetkinlikler" href="/#yetkinlikler">Yetkinlikler</a>
+      <a aria-current="page" class="px-space-md py-2 transition-all bg-primary/15 text-primary border border-primary/30 font-label-md rounded-full shadow-sm gap-space-sm" data-path="icerikler" href="/blog">Teknik İçerikler</a>
+      <a class="px-space-md py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] transition-all" data-path="iletisim" href="/#iletisim">İletişim</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-1.5 sm:gap-2 md:gap-space-sm shrink-0">
+      <div id="lang-toggle-container" class="inline-flex items-center w-[66px] sm:w-[86px] h-[30px] sm:h-[36px] box-border p-0.5 sm:p-1 bg-[#161b22] border border-white/[0.1] rounded-full text-xs font-semibold select-none gap-0.5 shrink-0 justify-center overflow-hidden">
+        <button id="lang-btn-tr" type="button" onclick="smoothSwitchLang('tr')" class="w-7 sm:w-9 h-6 sm:h-7 text-[11px] sm:text-xs flex items-center justify-center rounded-full text-center transition-all duration-200 bg-primary/20 border border-primary/40 text-primary shadow-[0_0_12px_rgba(56,189,248,0.3)] shrink-0 cursor-pointer select-none">TR</button>
+        <button id="lang-btn-en" type="button" onclick="smoothSwitchLang('en')" class="w-7 sm:w-9 h-6 sm:h-7 text-[11px] sm:text-xs flex items-center justify-center rounded-full text-center transition-all duration-200 text-text-muted hover:text-white border border-transparent shrink-0 cursor-pointer select-none">EN</button>
+      </div>
+      <a class="inline-flex items-center justify-center whitespace-nowrap px-2.5 sm:px-4 md:px-5 h-8 sm:h-10 md:h-11 rounded-full bg-primary text-on-primary font-label-md text-xs sm:text-sm font-semibold transition-all duration-300 shadow-[0_0_20px_rgba(56,189,248,0.25)] hover:shadow-[0_0_28px_rgba(56,189,248,0.45)] hover:scale-[1.02] active:scale-[0.98] shrink-0" href="/#iletisim">
+        <span class="hidden sm:inline">İletişime Geç</span>
+        <span class="sm:hidden">İletişim</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Page Content -->
+<main class="w-full pt-16 sm:pt-20 bg-surface-container-lowest flex-1 relative overflow-hidden">
+  <!-- Subtle Ambient Glows -->
+  <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[320px] bg-gradient-to-tr from-primary-container/10 via-primary/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="absolute top-[480px] right-1/4 w-[480px] h-[360px] bg-secondary-container/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
+
+  <div class="max-w-5xl mx-auto px-gutter-mobile md:px-gutter-desktop py-space-2xl md:py-space-3xl flex flex-col gap-space-2xl">
+    
+    <!-- Hero / Title Section -->
+    <section class="flex flex-col items-center text-center gap-space-md relative">
+      <h1 class="font-display-hero text-headline-lg md:text-display-hero text-on-surface tracking-tight max-w-3xl">
+        Tüm <span class="text-primary">Gönderiler</span>
+      </h1>
+    </section>
+
+    <!-- Filters & Search Toolbar -->
+    <section class="flex flex-col md:flex-row items-center justify-between gap-space-md p-2 rounded-2xl md:rounded-full bg-gradient-to-r from-[#161b22] to-[#0c0e11] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] backdrop-blur-md">
+      <!-- Tabs (All, Articles, Videos) -->
+      <div class="flex items-center gap-1 p-1 bg-[#0d1117] rounded-full border border-white/[0.06] w-full md:w-auto overflow-x-auto" id="filterTabs">
+        <button type="button" data-filter="all" class="filter-tab px-4 py-2 rounded-full font-label-md text-xs sm:text-sm font-semibold transition-all duration-200 bg-primary/15 text-primary border border-primary/30 shadow-[0_0_12px_rgba(56,189,248,0.25)] flex items-center gap-1.5 whitespace-nowrap">
+          <span class="material-symbols-outlined text-[16px]">dynamic_feed</span>
+          <span>Tümü</span>
+          <span id="badge-all" class="ml-1 px-1.5 py-0.5 rounded-full text-[10px] bg-primary/20 text-primary border border-primary/30 font-mono-code">8</span>
+        </button>
+        <button type="button" data-filter="article" class="filter-tab px-4 py-2 rounded-full font-label-md text-xs sm:text-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] border border-transparent flex items-center gap-1.5 whitespace-nowrap">
+          <span class="material-symbols-outlined text-[16px]">article</span>
+          <span>Makaleler</span>
+          <span id="badge-article" class="ml-1 px-1.5 py-0.5 rounded-full text-[10px] bg-[#1c2331] text-secondary border border-white/[0.08] font-mono-code">6</span>
+        </button>
+        <button type="button" data-filter="video" class="filter-tab px-4 py-2 rounded-full font-label-md text-xs sm:text-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] border border-transparent flex items-center gap-1.5 whitespace-nowrap">
+          <span class="material-symbols-outlined text-[16px]">smart_display</span>
+          <span>Videolar</span>
+          <span id="badge-video" class="ml-1 px-1.5 py-0.5 rounded-full text-[10px] bg-[#1c2331] text-secondary border border-white/[0.08] font-mono-code">2</span>
+        </button>
+      </div>
+
+      <!-- Quick Search Input -->
+      <div class="relative w-full md:w-72 pr-1">
+        <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-secondary text-[18px]">search</span>
+        <input type="text" id="searchInput" placeholder="Gönderilerde ara..." class="w-full pl-10 pr-9 py-2 text-sm rounded-full bg-[#0d1117] border border-white/[0.08] text-on-surface placeholder:text-secondary focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all">
+        <button id="clearSearch" class="hidden absolute right-3.5 top-1/2 -translate-y-1/2 text-secondary hover:text-on-surface">
+          <span class="material-symbols-outlined text-[16px]">close</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Unified Posts Timeline Container -->
+    <!-- [2026-10-21 C] POST_LIST_START..END arasi SUNUCUDA doldurulur (server.js /blog).
+         Statik dosyada kalan icerik, JS kapaliyken gorunen yedektir. -->
+    <section id="postsContainer" class="flex flex-col gap-space-lg">
+<!-- POST_LIST_START -->
+
+          <article data-post-id="post-1794397992223" data-post-type="article" class="p-5 sm:p-space-xl md:p-space-2xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:border-primary/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between gap-space-lg group relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500"></div>
+
+            <div class="flex flex-col gap-space-sm">
+              <!-- Meta Tags & Read Time -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span class="px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-label-md text-xs font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span>Makale / Blog</span>
+                  </span>
+                  
+                  <span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">unicode</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">turkce</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">yazilim</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">guvenlik</span>
+                </div>
+                <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                  <span class="material-symbols-outlined text-[15px] text-primary">timer</span>
+                  <span>11 dk okuma</span>
+                </span>
+              </div>
+
+                <a href="/blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi" class="block w-full aspect-[40/21] sm:aspect-[40/21] rounded-2xl overflow-hidden bg-[#090b0e] border border-white/[0.08] relative group/cover mt-1 mb-2">
+                  <img src="/uploads/cover-noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi.jpg" alt="Noktasız Bir Harf Dünyanın Yazılımını Nasıl Kırdı?" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/cover:scale-[1.03]" onerror="this.parentElement.style.display='none'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </a>
+
+              <!-- Title -->
+              <h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight">
+                <a href="/blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi" class="block">
+                  Noktasız Bir Harf Dünyanın Yazılımını Nasıl Kırdı?
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-3">
+                2008 yılında Ankara&#039;da bir çift SMS üzerinden tartışıyordu. Kocanın yazdığı cümle, &quot;Zaten sen sıkışınca konuyu değiştiriyorsun&quot; gibi masum bir sitemdi. Basına yansıdığına göre kadının telefonu noktasız ı harfini göstermiyor, onun yerine noktalı i basıyordu. sıkışınca kelimesi karşı tarafa bambaşka, ağır hakaret...
+              </p>
+            </div>
+
+            <!-- Footer Bar of Card -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-space-md border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 font-body-sm text-xs sm:text-body-sm text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                <span>11 Kasım 2026</span>
+              </span>
+
+              <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
+                <a href="/blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
+                  <span>Okuma Modu</span>
+                </a>
+                <a href="/blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span>Yazıyı Oku</span>
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article data-post-id="post-1794226244670" data-post-type="article" class="p-5 sm:p-space-xl md:p-space-2xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:border-primary/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between gap-space-lg group relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500"></div>
+
+            <div class="flex flex-col gap-space-sm">
+              <!-- Meta Tags & Read Time -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span class="px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-label-md text-xs font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span>Makale / Blog</span>
+                  </span>
+                  
+                  <span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">ag</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">5g</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">metro-ethernet</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">transport</span>
+                </div>
+                <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                  <span class="material-symbols-outlined text-[15px] text-primary">timer</span>
+                  <span>6 dk okuma</span>
+                </span>
+              </div>
+
+                <a href="/blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar" class="block w-full aspect-[40/21] sm:aspect-[40/21] rounded-2xl overflow-hidden bg-[#090b0e] border border-white/[0.08] relative group/cover mt-1 mb-2">
+                  <img src="/uploads/cover-5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar.jpg" alt="5G ve Metro Ethernet: Yeni Nesil Taşıyıcı Ağların Kesişimi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/cover:scale-[1.03]" onerror="this.parentElement.style.display='none'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </a>
+
+              <!-- Title -->
+              <h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight">
+                <a href="/blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar" class="block">
+                  5G ve Metro Ethernet: Yeni Nesil Taşıyıcı Ağların Kesişimi
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-3">
+                5G&#039;nin radyo tarafındaki iddiaları — gigabit hızlar, tek haneli milisaniye gecikme, santimetre hassasiyetinde konum — kablosuz arayüzde bitmiyor. Bu hedeflerin tutturulup tutturulamayacağı büyük ölçüde baz istasyonunun arkasındaki taşıyıcı ağda (transport network) belirleniyor. Operatörlerin elindeki metro...
+              </p>
+            </div>
+
+            <!-- Footer Bar of Card -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-space-md border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 font-body-sm text-xs sm:text-body-sm text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                <span>9 Kasım 2026</span>
+              </span>
+
+              <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
+                <a href="/blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
+                  <span>Okuma Modu</span>
+                </a>
+                <a href="/blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span>Yazıyı Oku</span>
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article data-post-id="post-1793649068156" data-post-type="article" class="p-5 sm:p-space-xl md:p-space-2xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:border-primary/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between gap-space-lg group relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500"></div>
+
+            <div class="flex flex-col gap-space-sm">
+              <!-- Meta Tags & Read Time -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span class="px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-label-md text-xs font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span>Makale / Blog</span>
+                  </span>
+                  
+                  <span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">yapay-zeka</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">evren</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">mlops</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">ssb</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">sayzek</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">strateji</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">egemenlik</span>
+                </div>
+                <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                  <span class="material-symbols-outlined text-[15px] text-primary">timer</span>
+                  <span>10 dk okuma</span>
+                </span>
+              </div>
+
+                <a href="/blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik" class="block w-full aspect-[40/21] sm:aspect-[40/21] rounded-2xl overflow-hidden bg-[#090b0e] border border-white/[0.08] relative group/cover mt-1 mb-2">
+                  <img src="/uploads/cover-evren-milli-yapay-zeka-platformu-dijital-egemenlik.jpg" alt="EVREN: Millî Yapay Zekâ Platformu ve Dijital Egemenlik Hamlesi" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/cover:scale-[1.03]" onerror="this.parentElement.style.display='none'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </a>
+
+              <!-- Title -->
+              <h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight">
+                <a href="/blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik" class="block">
+                  EVREN: Millî Yapay Zekâ Platformu ve Dijital Egemenlik Hamlesi
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-3">
+                EVREN, Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) himayesinde, Savunma Sanayii Yapay Zekâ Yetenek Kümelenmesi (SAYZEK) koordinasyonunda geliştirilen uçtan uca millî MLOps platformu. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) himayesinde ve Savunma Sanayii Yapay Zekâ Yetenek Kümelenmesi (SAYZEK)...
+              </p>
+            </div>
+
+            <!-- Footer Bar of Card -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-space-md border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 font-body-sm text-xs sm:text-body-sm text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                <span>2 Kasım 2026</span>
+              </span>
+
+              <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
+                <a href="/blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
+                  <span>Okuma Modu</span>
+                </a>
+                <a href="/blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span>Yazıyı Oku</span>
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article data-post-id="post-1793205175192" data-post-type="article" class="p-5 sm:p-space-xl md:p-space-2xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:border-primary/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between gap-space-lg group relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500"></div>
+
+            <div class="flex flex-col gap-space-sm">
+              <!-- Meta Tags & Read Time -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span class="px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-label-md text-xs font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span>Makale / Blog</span>
+                  </span>
+                  
+                  <span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Plastik Atık</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Geri Dönüşüm</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">İnşaat Malzemeleri</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Sürdürülebilirlik</span>
+                </div>
+                <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                  <span class="material-symbols-outlined text-[15px] text-primary">timer</span>
+                  <span>17 dk okuma</span>
+                </span>
+              </div>
+
+                <a href="/blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor" class="block w-full aspect-[40/21] sm:aspect-[40/21] rounded-2xl overflow-hidden bg-[#090b0e] border border-white/[0.08] relative group/cover mt-1 mb-2">
+                  <img src="/uploads/cover-siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor.jpg" alt="Şişeden Duvar, Poşetten Yol: Plastik Atık Nasıl İnşaat Malzemesine Dönüşüyor?" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/cover:scale-[1.03]" onerror="this.parentElement.style.display='none'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </a>
+
+              <!-- Title -->
+              <h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight">
+                <a href="/blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor" class="block">
+                  Şişeden Duvar, Poşetten Yol: Plastik Atık Nasıl İnşaat Malzemesine Dönüşüyor?
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-3">
+                Küresel ölçekte üretilen ve tüketilen plastik miktarı, gezegenin ekolojik taşıma kapasitesini ve atık yönetim altyapılarını ciddi şekilde zorlamaktadır. Statista verilerine göre 2019 yılında dünya genelinde yaklaşık 460 milyon metrik ton plastik kullanılmış ve 353 milyon metrik ton plastik atık ortaya çıkmıştır...
+              </p>
+            </div>
+
+            <!-- Footer Bar of Card -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-space-md border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 font-body-sm text-xs sm:text-body-sm text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                <span>28 Ekim 2026</span>
+              </span>
+
+              <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
+                <a href="/blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
+                  <span>Okuma Modu</span>
+                </a>
+                <a href="/blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span>Yazıyı Oku</span>
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article data-post-id="post-9" data-post-type="article" class="p-5 sm:p-space-xl md:p-space-2xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:border-primary/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between gap-space-lg group relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500"></div>
+
+            <div class="flex flex-col gap-space-sm">
+              <!-- Meta Tags & Read Time -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span class="px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-label-md text-xs font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span>Makale / Blog</span>
+                  </span>
+                  
+                  <span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">AI</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">GenAI</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Yapay Zeka &amp; Jeopolitik</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Dijital Egemenlik</span>
+                </div>
+                <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                  <span class="material-symbols-outlined text-[15px] text-primary">timer</span>
+                  <span>8 dk okuma</span>
+                </span>
+              </div>
+
+                <a href="/blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka" class="block w-full aspect-[40/21] sm:aspect-[40/21] rounded-2xl overflow-hidden bg-[#090b0e] border border-white/[0.08] relative group/cover mt-1 mb-2">
+                  <img src="/uploads/cover-1790521620449-72dcf1e0.jpg" alt="Dijital Egemenlik Yarışı: Washington&#039;dan Ankara&#039;ya Yapay Zekâ Güçleri" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/cover:scale-[1.03]" onerror="this.parentElement.style.display='none'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </a>
+
+              <!-- Title -->
+              <h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight">
+                <a href="/blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka" class="block">
+                  Dijital Egemenlik Yarışı: Washington&#039;dan Ankara&#039;ya Yapay Zekâ Güçleri
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-3">
+                Yapay zekâ artık bir yazılım meselesi değil, uçtan uca jeopolitik bir hesap. ABD sermaye ve hesaplama gücüyle, Çin verimlilik ve fiziksel entegrasyonla liderliğe gidiyor; Avrupa düzenleyici kimliğe hapsolup geride kalıyor. Bu makalede üç kıtanın stratejisini, AB&#039;nin AI Continent Action Plan&#039;ını ve Türkiye&#039;nin savunma sanayiinden başlayan egemenlik arayışını inceliyor; Türkiye ve benzer ölçekli ülkeler için 15 maddelik bir yol haritası sunuyoruz.
+              </p>
+            </div>
+
+            <!-- Footer Bar of Card -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-space-md border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 font-body-sm text-xs sm:text-body-sm text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                <span>27 Eylül 2026</span>
+              </span>
+
+              <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
+                <a href="/blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
+                  <span>Okuma Modu</span>
+                </a>
+                <a href="/blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span>Yazıyı Oku</span>
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+          <article data-post-id="post-8" data-post-type="article" class="p-5 sm:p-space-xl md:p-space-2xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:border-primary/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] transition-all duration-300 flex flex-col justify-between gap-space-lg group relative overflow-hidden">
+            <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-primary/0 group-hover:via-primary to-transparent transition-all duration-500"></div>
+
+            <div class="flex flex-col gap-space-sm">
+              <!-- Meta Tags & Read Time -->
+              <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                <div class="flex flex-wrap items-center gap-space-xs">
+                  <span class="px-2.5 py-0.5 rounded-full bg-primary/15 border border-primary/30 text-primary font-label-md text-xs font-semibold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                    <span>Makale / Blog</span>
+                  </span>
+                  
+                  <span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Bilgisayar Bilimi Eğitimi &amp; CodeAI</span><span class="px-2.5 py-1 rounded-full bg-[#1c2331] border border-white/[0.08] hover:border-primary/40 hover:text-primary transition-colors text-on-surface font-mono-code text-xs">Dijital Okuryazarlık</span>
+                </div>
+                <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                  <span class="material-symbols-outlined text-[15px] text-primary">timer</span>
+                  <span>4 dk okuma</span>
+                </span>
+              </div>
+
+                <a href="/blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye" class="block w-full aspect-[40/21] sm:aspect-[40/21] rounded-2xl overflow-hidden bg-[#090b0e] border border-white/[0.08] relative group/cover mt-1 mb-2">
+                  <img src="/uploads/cover-1790522050687-8e729a20.jpg" alt="Dijital Geleceği İnşa Etmek: Code.org&#039;dan CodeAI&#039;ya Bilgisayar Bilimi Eğitiminin Dönüşümü ve Türkiye" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/cover:scale-[1.03]" onerror="this.parentElement.style.display='none'">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </a>
+
+              <!-- Title -->
+              <h2 class="font-headline-md text-headline-sm md:text-headline-md text-on-surface group-hover:text-primary transition-colors tracking-tight">
+                <a href="/blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye" class="block">
+                  Dijital Geleceği İnşa Etmek: Code.org&#039;dan CodeAI&#039;ya Bilgisayar Bilimi Eğitiminin Dönüşümü ve Türkiye
+                </a>
+              </h2>
+
+              <!-- Excerpt -->
+              <p class="font-body-md text-body-md text-secondary leading-relaxed line-clamp-3">
+                Bugün yapay zekanın her alana nüfuz ettiği bir çağda, öğrencileri teknolojinin pasif tüketicisi olmaktan çıkarıp aktif üreticiye dönüştürmek kritik bir görev. Bu makale Code.org&#039;un neden kurulduğunu, CodeAI&#039;ya nasıl evrildiğini ve Türkiye&#039;nin bu dönüşümde ne yaptığını, ne yapması gerektiğini ele alıyor.
+              </p>
+            </div>
+
+            <!-- Footer Bar of Card -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-space-md border-t border-white/[0.06]">
+              <span class="inline-flex items-center gap-1.5 font-body-sm text-xs sm:text-body-sm text-secondary shrink-0">
+                <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                <span>25 Eylül 2026</span>
+              </span>
+
+              <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
+                <a href="/blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
+                  <span>Okuma Modu</span>
+                </a>
+                <a href="/blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                  <span>Yazıyı Oku</span>
+                  <span class="material-symbols-outlined text-[15px] sm:text-[16px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        
+            <article data-post-id="1" data-post-type="video" class="p-space-lg md:p-space-xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] hover:border-primary/40 transition-all duration-300 flex flex-col md:flex-row gap-space-lg group shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] relative overflow-hidden">
+              <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-red-500/0 group-hover:via-red-500 to-transparent transition-all duration-500"></div>
+
+              <!-- Video Thumbnail with Play overlay -->
+              <div class="w-full md:w-72 sm:w-80 shrink-0 aspect-video rounded-2xl overflow-hidden relative bg-[#090b0e] border border-white/[0.08] group/thumb">
+                <img src="https://img.youtube.com/vi/rOR6eyeNCcE/hqdefault.jpg" alt="SD-LAN Nedir? ve Kullanım Alanları Nelerdir?" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" onerror="this.src='/assets/og-image.png'">
+                <a href="https://www.youtube.com/watch?v=rOR6eyeNCcE" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-black/40 hover:bg-black/20 flex items-center justify-center transition-all group/play" title="YouTube'da İzle">
+                  <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg group-hover/play:scale-110 group-hover/play:bg-red-600 transition-all">
+                    <span class="material-symbols-outlined text-[26px] ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                  </div>
+                </a>
+                <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded text-[11px] font-semibold bg-black/80 text-white flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px] text-red-500">smart_display</span>
+                  <span>Video</span>
+                </span>
+              </div>
+
+              <!-- Video Content Info -->
+              <div class="flex flex-col justify-between flex-1 gap-space-sm">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                    <div class="flex items-center gap-2">
+                      <span class="px-2.5 py-0.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 font-label-md text-xs font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                        <span>YouTube Video</span>
+                      </span>
+                      
+                    </div>
+                    <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                      <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                      <span>3 Eylül 2026</span>
+                    </span>
+                  </div>
+
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors tracking-tight mt-1">
+                    <a href="https://www.youtube.com/watch?v=rOR6eyeNCcE" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                      SD-LAN Nedir? ve Kullanım Alanları Nelerdir?
+                    </a>
+                  </h2>
+
+                  <p class="font-body-md text-body-md text-secondary line-clamp-2 leading-relaxed">
+                    Serhat Çetin resmi YouTube kanalında paylaşılan teknik eğitim videosu ve mimari gösterim.
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-space-sm border-t border-white/[0.06] mt-auto">
+                  <span class="text-xs text-secondary font-medium">Platform: YouTube</span>
+                  <a href="https://www.youtube.com/watch?v=rOR6eyeNCcE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-red-500/10 hover:bg-red-600 text-red-400 hover:text-white font-label-md text-label-md font-semibold border border-red-500/30 hover:border-transparent transition-all">
+                    <span>Videoyu İzle</span>
+                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+            <article data-post-id="2" data-post-type="video" class="p-space-lg md:p-space-xl rounded-3xl bg-gradient-to-br from-[#1c2432] via-[#131822] to-[#0b0e13] hover:from-[#222c3d] hover:via-[#161d2a] hover:to-[#0d1017] border border-white/[0.1] hover:border-primary/40 transition-all duration-300 flex flex-col md:flex-row gap-space-lg group shadow-[0_8px_32px_rgba(0,0,0,0.36)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.5)] relative overflow-hidden">
+              <div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-red-500/0 group-hover:via-red-500 to-transparent transition-all duration-500"></div>
+
+              <!-- Video Thumbnail with Play overlay -->
+              <div class="w-full md:w-72 sm:w-80 shrink-0 aspect-video rounded-2xl overflow-hidden relative bg-[#090b0e] border border-white/[0.08] group/thumb">
+                <img src="https://img.youtube.com/vi/0gDfpvOOzIs/hqdefault.jpg" alt="MetroEthernet: İşletmelere Özel Yüksek Hız" loading="lazy" decoding="async" class="w-full h-full object-cover transition-transform duration-500 group-hover/thumb:scale-105" onerror="this.src='/assets/og-image.png'">
+                <a href="https://www.youtube.com/watch?v=0gDfpvOOzIs" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-black/40 hover:bg-black/20 flex items-center justify-center transition-all group/play" title="YouTube'da İzle">
+                  <div class="w-12 h-12 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-lg group-hover/play:scale-110 group-hover/play:bg-red-600 transition-all">
+                    <span class="material-symbols-outlined text-[26px] ml-0.5" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                  </div>
+                </a>
+                <span class="absolute bottom-2 right-2 px-2 py-0.5 rounded text-[11px] font-semibold bg-black/80 text-white flex items-center gap-1">
+                  <span class="material-symbols-outlined text-[13px] text-red-500">smart_display</span>
+                  <span>Video</span>
+                </span>
+              </div>
+
+              <!-- Video Content Info -->
+              <div class="flex flex-col justify-between flex-1 gap-space-sm">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex flex-wrap items-center justify-between gap-space-sm">
+                    <div class="flex items-center gap-2">
+                      <span class="px-2.5 py-0.5 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 font-label-md text-xs font-semibold flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>
+                        <span>YouTube Video</span>
+                      </span>
+                      
+                    </div>
+                    <span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+                      <span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span>
+                      <span>3 Eylül 2026</span>
+                    </span>
+                  </div>
+
+                  <h2 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors tracking-tight mt-1">
+                    <a href="https://www.youtube.com/watch?v=0gDfpvOOzIs" target="_blank" rel="noopener noreferrer" class="hover:underline">
+                      MetroEthernet: İşletmelere Özel Yüksek Hız
+                    </a>
+                  </h2>
+
+                  <p class="font-body-md text-body-md text-secondary line-clamp-2 leading-relaxed">
+                    Serhat Çetin resmi YouTube kanalında paylaşılan teknik eğitim videosu ve mimari gösterim.
+                  </p>
+                </div>
+
+                <div class="flex items-center justify-between pt-space-sm border-t border-white/[0.06] mt-auto">
+                  <span class="text-xs text-secondary font-medium">Platform: YouTube</span>
+                  <a href="https://www.youtube.com/watch?v=0gDfpvOOzIs" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-red-500/10 hover:bg-red-600 text-red-400 hover:text-white font-label-md text-label-md font-semibold border border-red-500/30 hover:border-transparent transition-all">
+                    <span>Videoyu İzle</span>
+                    <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-0.5">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          
+<!-- POST_LIST_END -->
+    </section>
+
+    <!-- Blogger Archive Link -->
+    <div class="flex justify-center pt-space-md pb-space-lg">
+      <a href="https://cetinserhat.blogspot.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[#161b22] border border-white/[0.08] hover:border-[#ff5722]/50 hover:bg-[#1a202a] text-on-surface hover:text-[#ff7a50] transition-all duration-300 shadow-sm group">
+        <svg class="w-5 h-5 text-[#ff5722] group-hover:scale-110 transition-transform shrink-0" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M19.5 2H4.5A2.5 2.5 0 0 0 2 4.5v15A2.5 2.5 0 0 0 4.5 22h15a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 19.5 2zm-5.25 5.5a1.75 1.75 0 0 1 1.75 1.75v1a1.75 1.75 0 0 1-1.75 1.75h-4.5A1.75 1.75 0 0 1 8 10.25v-1A1.75 1.75 0 0 1 9.75 7.5h4.5zm.5 8.75a1.75 1.75 0 0 1-1.75 1.75h-5A1.75 1.75 0 0 1 6.25 16.25v-1.5A1.75 1.75 0 0 1 8 13h5a1.75 1.75 0 0 1 1.75 1.75v1.5z"/>
+        </svg>
+        <span class="font-label-md text-sm font-semibold">Blogger Arşivi</span>
+        <span class="material-symbols-outlined text-[16px] text-secondary group-hover:text-[#ff7a50] group-hover:translate-x-0.5 transition-all">north_east</span>
+      </a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="w-full bg-[#090b0e] border-t border-white/[0.06] py-space-2xl">
+  <div class="max-w-[1360px] mx-auto px-gutter-mobile md:px-gutter-desktop flex flex-col items-center text-center gap-space-md">
+    <div class="flex flex-col items-center gap-1">
+      <span class="font-headline-sm text-headline-sm md:text-headline-sm font-bold text-on-surface tracking-tight">Serhat Çetin</span>
+      <p class="text-xs text-on-surface-variant font-mono-code tracking-wide">Technical Product Manager &amp; Senior Network Engineer &amp; Project Manager</p>
+    </div>
+    <div class="flex flex-wrap items-center justify-center gap-x-space-lg gap-y-2 text-xs font-label-md">
+      <a class="inline-flex items-center gap-1.5 text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/cetinserhat/" rel="noopener noreferrer" target="_blank">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.32a1.64 1.64 0 0 0-1.66 1.64 1.65 1.65 0 0 0 1.66 1.65 1.65 1.65 0 0 0 1.65-1.65c0-.91-.74-1.64-1.65-1.64Z"></path></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="/">Ana Sayfa</a>
+      <a class="text-primary font-semibold transition-colors" href="/blog">Makaleler</a>
+      <a class="text-on-surface-variant hover:text-primary transition-colors" href="/#iletisim">İletişim</a>
+    </div>
+    <div class="pt-space-sm border-t border-white/[0.04] w-full max-w-md text-center">
+      <p class="font-caption text-caption text-text-muted">© 2026 Serhat Çetin. Tüm hakları saklıdır.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Fetch & Render Unified Posts (Articles, Blog, YouTube Videos) -->
+<!-- [2026-10-21 C] Liste ARTIK SUNUCUDA basilir. Sunucu kartlari ve ayni veriyi asagidaki
+     JSON bloguna gomer; bu script yalnizca filtre/arama icin yeniden cizer. Gomulu veri
+     yoksa (or. /blog.html'e dogrudan giris) /api/posts'e duser.
+     Olculdu (once): sunucudan gelen /blog HTML'inde 0 yazi karti, 64 kelime, noscript yok. -->
+<script type="application/json" id="posts-data">{"posts":[{"id":"post-1794397992223","type":"article","title":"Noktasız Bir Harf Dünyanın Yazılımını Nasıl Kırdı?","slug":"noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi","excerpt":"2008 yılında Ankara'da bir çift SMS üzerinden tartışıyordu. Kocanın yazdığı cümle, \"Zaten sen sıkışınca konuyu değiştiriyorsun\" gibi masum bir sitemdi. Basına yansıdığına göre kadının telefonu noktasız ı harfini göstermiyor, onun yerine noktalı i basıyordu. sıkışınca kelimesi karşı tarafa bambaşka, ağır hakaret...","content":"## Tek Bir Noktanın Bedeli\n\n2008 yılında Ankara'da bir çift SMS üzerinden tartışıyordu. Kocanın yazdığı cümle, \"Zaten sen sıkışınca konuyu değiştiriyorsun\" gibi masum bir sitemdi. Basına yansıdığına göre kadının telefonu noktasız **ı** harfini göstermiyor, onun yerine noktalı **i** basıyordu. *sıkışınca* kelimesi karşı tarafa bambaşka, ağır hakaret gibi okunan bir kelime olarak ulaştı. Ailenin bunu hakaret saymasıyla çıkan kavgada kadın hayatını kaybetti, adam cezaevinde intihar etti. [13][14]\n\nBu hikâyeyi bir yazılım hatası hikâyesi yapan şey trajedinin kendisi değil, sebebi: bir karakter kodlaması. Aynı hata bugün Türkiye'de oyun oynayan herkesin tanıdığı bir görüntüye de yol açıyor — menüde harfin yerinde duran küçücük boş kutucuklar. Yazılımcıların yirmi yıldır konuştuğu adıyla: **Türkçe I problemi** (*Turkish I problem*).\n\n## 1928: İki \"i\"nin Doğuşu\n\nTürkiye 1928'de Arap harflerinden Latin alfabesine geçtiğinde, Latin alfabesinde Türkçenin ünlüleri için yeterli harf yoktu. Ö ve ü için Almanların çözümü kullanıldı: nokta. Ama bir ses için tam tersi yapıldı — **i**'nin noktası kaldırıldı.\n\nBöylece Türkçede iki ayrı i oldu: noktalı **i** ve noktasız **ı**. Azerbaycan Türkçesinde de aynı ikili var. Fark anlam değiştiriyor: **sınır** bir hudut, **sinir** bir asap. Ve işin can alıcı kısmı: nokta büyük harfte de kalıyor. Küçük **i** büyürken **İ** oluyor, noktası üstünde; küçük **ı** ise **I** oluyor, noktasız. [1]\n\nİngilizcede durum farklı. Ortaçağ müstensihleri **i**'yi m, n, u gibi harflerin arasında kaybolmasın diye noktalamaya başladı; nokta sesi değiştirmiyordu, sadece okunurluk içindi. Bu yüzden İngilizce büyük I'yı noktasız yazar. Yani Türkçede nokta **anlam taşıyan bir işaret**, İngilizcede sadece bir leke. Yazılım tarihinin tamamı bu farkın üstüne kuruldu.\n\n## Bilgisayarlar İngilizce Öğrendi\n\nAltmışlardan beri kullanılan ASCII standardında tek bir çift vardı: **I** ve **i**. Türkçe bilgisayara geldiğinde bu çift olduğu gibi devralındı: İngilizcenin büyük I'sı Türkçenin noktasız büyük I'sı, İngilizcenin küçük i'si Türkçenin noktalı küçük i'si oldu. Sadece **İ** ve **ı** için yeni kod noktaları açıldı (U+0130 ve U+0131). Pratikti: aynı metin hem Türkçe hem İngilizce okunabiliyordu.\n\nAma bilgisayara bir bilmece bıraktı: *Bu karakterin* (**I**) *küçük hâli hangisi?* İngilizcede **i**, Türkçede **ı**. Harfin kendisi hangi dilde olduğunu söylemiyor.\n\n1997'de Unicode e-posta listesinde John Cowan bu bilmeceyi kökten çözmeyi önerdi: I/i çiftini ikiye ayıralım, Türkçeye kendi harflerini verelim. Mark Davis yanıtında öneriyi reddetti; geriye dönük uyumluluk ve mevcut veride yol açacağı bozulma gerekçesiyle. Unicode'un bugünkü SSS'sinde de benzer bir açıklama var: eski Türkçe metinler ortak I ve i ile dolu, hangisinin hangisi olduğunu ayırmak \"katlanılamaz derecede zor\" ve insanlar yeni harfleri zaten yazmaz. [1][2]\n\nBilmece çözülmedi. Ve sorun, bu bilmecenin sadece yazarken değil, **karşılaştırırken** sorulmasıydı.\n\n## Kırılma Anı: TITLE, tıtle'a Dönüşünce\n\nBilgisayarlar büyük-küçük harfi sürekli değiştirir; yazmak için değil, eşleştirmek için. E-postanı büyük harfle yazsan da giriş yapabilirsin, çünkü sistem iki metni küçük harfe çevirip karşılaştırır.\n\nŞimdi aynı program Türkçe kuralları izlesin ve bilgisayarın yerel ayarı (*locale*) Türkçe olsun. **TITLE** küçük harfe çevrilince **tıtle** oluyor — noktasız ı ile. Ve **tıtle**, title değil. [3]\n\nJava'nın kendi kılavuzu 2006'dan beri tam bu örneği uyarı olarak yazıyor. [4] Oyun menülerindeki kutucuklar da aynı hatanın ürünü: Unity ile yapılmış oyunların çoğu menü metnini çalışma anında büyük harfe çeviriyor, **settings** kelimesi **SETTİNGS** oluyor, ama oyunun fontunda **İ** yok — font da yerine \"eksik harf\" kutusu çiziyor. Türk forumlarında dolaşan çözüm de bu yüzden: bölge biçimini İngilizceye al. [5]\n\n## Yirmi Yıllık Hata Kronolojisi\n\nHata raporları erken başladı. 2002'de bir programcı PHP'ye tuhaf bir hata bildirdi: programında InfoOracle diye bir parça vardı, programı Türkçeye alınca PHP onu bulamıyordu. PHP isimleri Türkçe kurallarla karşılaştırdığı için Info → ınfo oluyordu ve hiçbir şey eşleşmiyordu. Hata mesajı ismi yazdıramıyordu bile. [6]\n\n2008'de sorun adını aldı: Jeff Moser'ın **Turkey Test**'i — \"Kodunuz Türkiye'de çalışan bir bilgisayarda hâlâ çalışıyor mu?\" Moser'ın hükmü nettir: Türkiye'de düzgün çalışan kod, muhtemelen her yerde çalışır. [7] Bir ay sonra Stack Overflow'un kurucularından Jeff Atwood, \"What's Wrong With Turkey?\" başlıklı yazısında önce şakayla sordu, sonra soruyu tersine çevirdi: mesele Türkiye'nin nesi olduğu değil, **yazılımcının nesi olduğu**. [8]\n\nTürkiye'deki BT ekipleri bununla yaşamayı öğrendi. Apache Lucene'ün geliştiricisi Uwe Schindler 2012'de yazdığı yazıda, Türk BT uzmanlarına sorarsanız \"bilgisayarınızı Türkçe dışında her dilde kurun\" diyeceklerini anlatıyor. [9]\n\nSonra sırasıyla: 2016'da Kotlin, Türkçe ayarlı bilgisayarda derleme araçlarının kendi anahtar kelimesi **INFO**'yu tanımaması yüzünden projeleri derleyemedi. [10][11] 2022'de Red Hat'te curl çöktü: altındaki şifreleme kütüphanesi OpenSSL, CAMELLIA adlı şifreleme algoritmasını arıyordu, Türkçe ayarda CAMELLIA ile camellia artık aynı kelime değildi. [12] Düzeltme geldi ama bedava değil: OpenSSL 3.0'da yaklaşık 80 dosyayı kapsayan bir temizlik gerekti. [12] Kotlin 1.5 ile yerel-bağımsız büyük harf fonksiyonlarını ekledi, PHP 8.2 kendi harf fonksiyonlarını bilgisayarın dilini yok sayacak hâle getirdi. [11][6]\n\n## Aynı Harf, Bir Güvenlik Açığı\n\n2016'da John Gracey, GitHub'ın parola sıfırlama akışında bir açık buldu. GitHub, hesabı bulmak için yazdığın adresi bildikleriyle büyük-küçük harf farkını yok sayarak karşılaştırıyordu. Bu karşılaştırmada noktasız **ı** sıradan **i** sayılıyordu: mike ile mıke eşleşiyordu. Ama sıfırlama bağlantısı hesaptaki adrese değil, **senin yazdığın** adrese gidiyordu. Eğer Mike'ın e-posta servisi bir başkasının mıke adresini almasına izin veriyorsa, o kişi Mike'ın hesabının sıfırlama bağlantısını alabilirdi. [15][16]\n\nGitHub açığı, yazılan adresin hesaptakiyle birebir eşleşmesini şart koşarak kapattı. 2019'da aynı açığın yazısı Django geliştiricilerine ulaştı; Django üç hafta içinde yama yayımladı (CVE-2019-19844). [17] Bu kez bilgisayarın Türkçe olması bile gerekmedi: Unicode'un standart kuralı zaten her dilde **ı** → **I** dönüşümü yapıyor, harf e-posta adresinin içinden geldi.\n\n## SMS: 160 Karakterden 70'e Düşen Mesaj\n\nTelefonların derdi başkaydı: **ı** sms alfabesine sığmıyordu. SMS'in kendi alfabesinde ö, ü var; ı, ğ, ş yok. Telefon bu harfleri yine de gönderebiliyordu ama mesajın tamamını daha büyük bir alfabeye çevirmek zorundaydı; o zaman bir mesaj 160 yerine 70 karakter alıyordu. İnsanlar bir mesaj yerine iki üç mesaj ödedi ve şikâyet etti. Ekim 2007'de bir gazete manşeti kısaca şunu söylüyordu: mesaj yazarken bu harfleri kullanmayın. Telekomünikasyon kurumu da bir tarih koydu: Temmuz 2008'den itibaren Türkçe harfleri ucuz yolla yazamayan telefonlar ülkeye sokulmayacaktı. [13]\n\nKüresel standartta ise ucuz bir yol yoktu. Mart 2008'de standart değişti: mesajların geçebileceği ulusal alfabe tabloları eklendi. Değişikliğin gerekçesinde Türkiye'nin yeni kuralına atıf var ve listenin **1 numaralı dili Türkçe**. Ardından İspanyolca, aynı yıl Portekizce, 2009'da Hindistan'ın on dili geldi. [18][19]\n\n## Videonun Testi: Tek Makine, Yedi Dil\n\nEkim 2026'da videonun yapımcısı Screensplained (kod deposu: AliYil), tek bir Linux makineyi Türkçeye alıp yedi dilin temel büyük harf fonksiyonlarını denedi; kodu kendi deposunda yayınladı. [20] Videonun özeti şuydu: Python, JavaScript ve Go title yazdı; Java, C# ve Bash tıtle; C'de ise FILE ile file artık aynı kelime değildi.\n\n## Aynı Testi Ben de Koşturdum\n\nVideoyu izleyip \"peki bu gerçekten böyle mi\" diye sormak yerine testi kendi makinemde koşturdum: **Dell Latitude 6430U, Linux Mint 22.3, aynı makine, aynı gün, tek değişken LC_ALL.** Sürümler: Python 3.14.9, Node 24.22.2, Go 1.27.4, OpenJDK 21.0.13, .NET 10.0.404, Bash 5.3.9, gcc 15.2 (glibc).\n\n| Dil / sürüm | Denenen ifade | tr_TR.utf8 | C | Güvenli alternatif |\n| :--- | :--- | :--- | :--- | :--- |\n| Python 3.14 | \"TITLE\".lower() | title | title | — (zaten bağımsız) |\n| Node 24 | \"TITLE\".toLowerCase() | title | title | insan metni için toLocaleLowerCase(\"tr\") |\n| Go 1.27 | strings.ToLower | title | title | — (zaten bağımsız) |\n| Bash 5.3 | ${v,,} | **tıtle** | title | LC_ALL=C ile sar |\n| Java 21 | String.toLowerCase() | **tıtle** | title | toLowerCase(Locale.ROOT) |\n| C# / .NET 10 | ToLower() | **tıtle** | title | ToLowerInvariant(), OrdinalIgnoreCase |\n| C / glibc | tolower() | **tItle** | title | locale'den bağımsız karşılaştırma |\n| C / glibc | strcasecmp(\"FILE\",\"file\") | **-32** (eşleşmiyor) | 0 (eşleşiyor) | strcmp / strcasecmp_l |\n\nVideonun iddiaları doğrulandı, ama ölçüm üç şeyi ekledi:\n\n- **Güvenli fonksiyonlar gerçekten güvenli.** Java'da toLowerCase(Locale.ROOT) ve C#'ta ToLowerInvariant() her iki locale'de de title döndürdü; .NET'te StringComparison.OrdinalIgnoreCase ise FILE/file için true verdi. Yani çıkış yolu var ve tek satırlık.\n- **C'de kırılma harfte değil, karşılaştırmada.** glibc'nin tek baytlık tolower() fonksiyonu Türkçe kuralını uygulamadı, tItle verdi — çünkü noktasız **ı** tek bayta sığmıyor, kütüphane **I**'yı olduğu gibi bırakıyor. Ama geniş karakter fonksiyonu towlower('İ') tam Türkçe davranıp U+0069 verdi. Asıl çökme nedeni strcasecmp: FILE ile file Türkçe locale'de eşleşmiyor. OpenSSL'in başına gelen buydu.\n- **Aynı program, aynı makine, sadece bir ortam değişkeni.** LC_ALL C iken Java title, tr_TR.utf8 iken tıtle yazdı. Hata ne donanımda ne derleyicide; tamamen çalışma zamanı ortamında.\n\nBir de güvenlik iddiasını ölçtüm. Python 3.14'te \"İ\".lower() tek karakter değil **iki kod noktası** üretiyor: U+0069 + U+0307 (birleşen nokta). Sonuç: \"ignore\" in \"İGNORE\".lower() ifadesi False döndü. Yani anahtar kelimeye bakan ilkel bir filtre, metni görse bile eşleştiremiyor.\n\nHam çıktılar ve script: ~/projects/turkey-test/ (run2.sh, raw/*.txt).\n\nAdil olmak gerekirse Java ve C# için tıtle **Türkçe metinde doğru cevap**. Sorun, bu fonksiyonların Türkçe olmayan şeylere — komut adları, dosya isimleri, e-posta adresleri, yapılandırma anahtarları — uygulanmasıyla başlıyor. Microsoft kılavuzu bunu \"kanonik örnek\" diye anıyor, Google'ın Android araçları kodu uyarıyla işaretliyor, PostgreSQL'in kaynak kodunda bile şu not var: *\"Türkçe bu karakterlerle ('i' ve 'I') tuhaf şeyler yapabilir.\"* [21][5][22]\n\n## Peki Kim Suçlu?\n\nAlfabesini kuran dilbilimciler mi? 1997'de geriye dönük uyumluluğu veri bütünlüğüne tercih eden Unicode mu? Yoksa işlediği metnin insan diline mi, makine protokolüne mi ait olduğunu hiç sormayan yazılımcı mı?\n\nPratik cevap şu: harf doğru davranıyor, standart kendi gerekçesine sahip, hata **karar verilmemiş yerlerde** birikiyor. O yüzden çözüm ideolojik değil, mimari:\n\n1. **Makine metni ile insan metnini ayır.** Komut, dosya adı, e-posta, HTTP başlığı, veritabanı anahtarı makine metnidir; bunlarda yerel ayara bağımlı dönüşüm kullanma. Java'da toLowerCase(Locale.ROOT), .NET'te ToUpperInvariant() / StringComparison.OrdinalIgnoreCase.\n2. **İnsan metninde dili açıkça söyle.** Kullanıcıya gösterilecek başlıklarda tr-TR / Locale.forLanguageTag(\"tr\") parametresini geç; \"ortam nasılsa öyle\" varsayımını bırak.\n3. **Güvenlik katmanında normalize et.** İ küçültülünce i + U+0307 (birleşen nokta) üretir; yani \"İGNORE\".lower() metni \"ignore\" değildir. Filtre yazıyorsan karşılaştırmadan önce NFKC normalizasyonu uygula, yoksa anahtar kelime eşleştirmesi sessizce ıskalar.\n4. **Testi bir kez Türkçe koştur.** CI'da en az bir iş LC_ALL=tr_TR.UTF-8 ile çalışsın. Moser'ın 2008'deki iddiası hâlâ geçerli: Türkiye'de ayakta kalan kod, başka yerlerde de ayakta kalır.\n\n## Kaynaklar\n\n1. Wikipedia, \"Dotted and dotless I\" — https://en.wikipedia.org/wiki/Dotted_and_dotless_I\n2. Unicode FAQ, \"Case Mapping and Character Properties\" — https://www.unicode.org/faq/casemap_charprop.html\n3. Unicode e-posta listesi, 1997: John Cowan'ın önerisi ve Mark Davis'in yanıtı — https://www.unicode.org/mail-arch/unicode-ml/Archives-Old/UML009/0619.html · https://www.unicode.org/mail-arch/unicode-ml/Archives-Old/UML009/0624.html\n4. Java 21, String.toLowerCase() — https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html\n5. Android lint, \"DefaultLocale\" — https://googlesamples.github.io/android-custom-lint-rules/checks/DefaultLocale.md.html\n6. PHP bug #18556 (2002) ve PHP 8.2 strtolower RFC — https://bugs.php.net/18556 · https://wiki.php.net/rfc/strtolower-ascii\n7. Jeff Moser, \"Does Your Code Pass The Turkey Test?\" (2008) — https://www.moserware.com/2008/02/does-your-code-pass-turkey-test.html\n8. Jeff Atwood, \"What's Wrong With Turkey?\" (2008) — https://blog.codinghorror.com/whats-wrong-with-turkey/\n9. Uwe Schindler, Apache Lucene (2012) — https://blog.thetaphi.de/2012/07/default-locales-default-charsets-and.html\n10. Kotlin, KT-13631 — https://youtrack.jetbrains.com/issue/KT-13631\n11. Kotlin 1.5.0-RC duyurusu — https://blog.jetbrains.com/kotlin/2021/04/kotlin-1-5-0-rc-released/\n12. Red Hat Developer, \"OpenSSL 3.0: Dealing with a Turkish locale bug\" (2022) — https://developers.redhat.com/articles/2022/06/15/openssl-30-dealing-turkish-locale-bug\n13. Hürriyet, \"Küçücük bir nokta tam 5 kişiyi yaktı\" (2008) — https://www.hurriyet.com.tr/gundem/kucucuk-bir-nokta-tam-5-kisiyi-yakti-8748359\n14. Habertürk, \"'İ' harfi cinayeti\" (2008) — https://www.haberturk.com/yasam/haber/68975-i-harfi-cinayeti\n15. GitHub Bug Bounty, John Gracey — https://bounty.github.com/researchers/jagracey.html\n16. \"Hacking GitHub with Unicode's dotless 'i'\" (2019, arşiv) — https://web.archive.org/web/20210114183105/https://eng.getwisdom.io/hacking-github-with-unicode-dotless-i/\n17. Django güvenlik sürümleri, 18 Aralık 2019 (CVE-2019-19844) — https://www.djangoproject.com/weblog/2019/dec/18/security-releases/\n18. 3GPP TS 23.038 / ETSI TS 123 038 V9.1.1, ulusal dil tabloları — https://www.etsi.org/deliver/etsi_ts/123000_123099/123038/09.01.01_60/ts_123038v090101p.pdf\n19. Habertürk, \"Türkçe karakterli SMS'te fazla kontöre son\" (2007) — https://www.haberturk.com/ekonomi/teknoloji/haber/37284-turkce-karakterli-smste-fazla-kontore-son\n20. Screensplained, \"This Turkish Letter Keeps Breaking the World's Software\" (2026) ve test kodu — https://youtu.be/Ke-_V_XT5i4 · https://github.com/AliYil/screensplained/tree/main/005-turkish-i\n21. Microsoft, \"Best practices for comparing strings in .NET\" — https://learn.microsoft.com/en-us/dotnet/standard/base-types/best-practices-strings\n22. PostgreSQL, scansup.c içindeki not — https://github.com/postgres/postgres/blob/master/src/backend/parser/scansup.c\n\n\u003e Bu yazı hakkında\n\u003e Bu makalenin temel fikri ve çıkış noktası tamamen kişisel merakıma dayanmaktadır. İçeriğin araştırılması, derlenmesi ve yapılandırılması süreçlerinde yapay zeka teknolojilerinden yararlanılmıştır. Bu yazı mutlak bir sonuç veya nihai bir doğru sunma amacı taşımamakta; aksine, ilham verici bir bilgi paylaşımı ve yeni okumalar için bir başlangıç noktası olarak değerlendirilmek üzere yayınlanmaktadır.","tags":["unicode","turkce","yazilim","guvenlik"],"readTime":"11 dk","featured":false,"author":"Serhat Çetin","createdAt":"2026-11-11T11:53:08.000Z","coverImage":"/uploads/cover-noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi.jpg","url":"/blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi"},{"id":"post-1794226244670","type":"article","title":"5G ve Metro Ethernet: Yeni Nesil Taşıyıcı Ağların Kesişimi","slug":"5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar","excerpt":"5G'nin radyo tarafındaki iddiaları — gigabit hızlar, tek haneli milisaniye gecikme, santimetre hassasiyetinde konum — kablosuz arayüzde bitmiyor. Bu hedeflerin tutturulup tutturulamayacağı büyük ölçüde baz istasyonunun arkasındaki taşıyıcı ağda (transport network) belirleniyor. Operatörlerin elindeki metro...","content":"5G'nin radyo tarafındaki iddiaları — gigabit hızlar, tek haneli milisaniye gecikme, santimetre hassasiyetinde konum — kablosuz arayüzde bitmiyor. Bu hedeflerin tutturulup tutturulamayacağı büyük ölçüde baz istasyonunun arkasındaki taşıyıcı ağda (transport network) belirleniyor. Operatörlerin elindeki metro altyapısı ise çoğunlukla 4G döneminde, tamamen farklı bir trafik profili için kuruldu.\n\nBu yazının konusu, bu iki dünyanın nasıl birleştiği: 5G xHaul mimarisinin taşıyıcı ağa yüklediği yeni gereksinimler, Metro Ethernet'in (MEF 3.0 / CE 2.0) bu tabloda hâlâ neden merkezî olduğu, ağ dilimlemenin hangi katmanda sert hangi katmanda yumuşak kaldığı ve mikro saniye altı gecikmeler için saat senkronizasyonunun neden pazarlık konusu olmadığı.\n\n## 5G xHaul: Bir Baz İstasyonu Neden Üçe Bölündü\n\n3GPP'nin gNB mimarisi, geleneksel baz istasyonunu üç işlevsel birime ayırıyor: Radyo Birimi (RU), Dağıtılmış Birim (DU) ve Merkezi Birim (CU). Bu ayrıştırma, taşıyıcı ağı \"xHaul\" denen üç segmente bölüyor:\n\n- **Fronthaul (RU–DU):** CPRI'den eCPRI'ye geçiş. Yüksek bant genişliği, tek yönlü gecikme bütçesi **100 µs**'nin altında (IEEE 802.1CM).\n- **Midhaul (DU–CU):** F1 arayüzü, IP/Ethernet üzerinden taşınır. Gecikme profili esnek, tipik olarak **1–5 ms**.\n- **Backhaul (CU–5G Core):** Yüksek kapasiteli omurga. SLA garantili, yerel L2 PDU veya FlexE ile taşınabilir.\n\nBu tabloda kritik olan nokta, segmentlerin gecikme bütçelerinin birbirinden bağımsız olmaması. Fronthaul'da harcanan her mikro saniye, radyo tarafındaki hibrit otomatik tekrar istek (HARQ) penceresinden düşüyor. Bu yüzden eCPRI'ye geçiş sadece bir protokol değişimi değil; gecikmenin ağ tasarımının birinci kısıtı haline gelmesi demek.\n\nSahada bu üç segmenti toplayan cihaz Hücre Sahası Geçit Yolu (CSG, Cell Site Gateway). MEF 22.3.1 çerçevesinde sertifikalandırılan CSG'ler 10G, 25G, 50G ve 100G arayüz hızlarında toplama yapıyor ve aynı kutuda zamanlama senkronizasyonunu da üstleniyor.\n\n| Segment | Arayüz / Split | Gecikme profili | Tipik kapasite |\n| :--- | :--- | :--- | :--- |\n| Fronthaul | eCPRI, Split 7.2 / 8 | \u003c 100 µs (tek yönlü) | 10G–25G |\n| Midhaul | F1, IP/Ethernet | 1–5 ms | 25G–50G |\n| Backhaul | IP, Native L2 PDU, FlexE | 10–50 ms | 100G+ |\n\n## Metro Ethernet Neden Hâlâ Merkezde\n\n\"5G geldi, Ethernet bitti\" beklentisinin aksine operatör ağlarının büyük kısmı hâlâ L2 Ethernet servisleri üzerinden işliyor. MEF 3.0 ve Carrier Ethernet 2.0, bu hizmetleri standartlaştırılmış arayüzlerle tanımlıyor: E-Line (noktadan noktaya), E-LAN (çok noktadan çok noktaya), E-Tree (hub-and-spoke) ve E-Access. Sınır noktaları UNI, ENNI ve ECNI olarak ayrılıyor — bu ayrım, farklı operatörlerin birbirinin ağına standart bir dille bağlanmasını sağlayan şey.\n\nAsıl değer, servis tanımında değil, **ölçülebilirliğinde**. Operatör sınıfı OAM (IEEE 802.1ag / CFM ve ITU-T Y.1731) gecikme, seğirme ve paket kaybını sürekli ölçüyor; G.8031 ve G.8032 ise doğrusal ve halka topolojilerde hızlı koruma anahtarlaması yapıyor. 5G'de \"SLA garantili taşıyıcı\" ifadesinin arkasında bu ölçüm altyapısı var. Ölçmediğiniz gecikmeyi taahhüt edemezsiniz.\n\n## Dilimleme: Nerede Sert, Nerede Yumuşak\n\nAğ dilimleme (network slicing) çoğu zaman tek bir teknoloji gibi anlatılıyor, oysa iki farklı izolasyon seviyesi var ve ikisi karıştırıldığında mimari kararlar yanlış veriliyor.\n\n### Sert dilimleme: FlexE ve FGU\n\nOIF FlexE, istemci hızı ile fiziksel katman arasındaki katı bağı koparıyor. FlexE Shim, 100GE bir PHY'yi her biri **5 Gbps** olan 20 zaman dilimine (calendar slot) bölüyor; FlexE 2.0 ile 200G/400G PHY desteği ve daha ince granülarite geliyor.\n\nBir adım ötesi SPN (Slicing Packet Network) içindeki FGU (Fine Granularity Unit): 5 Gbps'lik slotu 10 Mbps'lik alt dilimlere bölüyor, 20 temel FGU çerçevesinden oluşan çoklu çerçevede toplam **480 alt dilim** oluşuyor. Sonuç, TDM davranışı gösteren, jitter'ı diğer trafikten etkilenmeyen bir boru. Fronthaul gibi deterministik gecikme isteyen akışlar için doğru araç bu.\n\n### Yumuşak dilimleme: SR-MPLS, SRv6, EVPN\n\nBunun alternatifi, aynı fiziksel altyapı üzerinde mantıksal ayrıştırma: Segment Routing (SR-MPLS veya SRv6) ve EVPN ile L2/L3 VPN'ler. İzolasyon istatistiksel — yani yoğun saatte komşu dilimin trafiği sizinkini etkileyebilir — ama ölçeklenebilirlik ve esneklik çok daha yüksek. Broadband Forum TR-350, EVPN ile FlexE'yi aynı mimaride birleştirerek dinamik trafik mühendisliğine imkân veriyor.\n\n| Yaklaşım | Teknoloji | İzolasyon | Nerede kullanılır |\n| :--- | :--- | :--- | :--- |\n| Sert | FlexE, FGU / fg-BU, TDM alt dilim | Fiziksel, deterministik | Fronthaul, kritik endüstriyel |\n| Yumuşak | SR-MPLS, SRv6, EVPN (TR-350) | Mantıksal, istatistiksel | Kurumsal VPN, genel dilimler |\n\nPratikte doğru cevap genellikle ikisinin birlikte kullanılması: fronthaul sert dilimde, geri kalan her şey yumuşak dilimde.\n\n## Senkronizasyon: 5G TDD Pazarlık Kabul Etmiyor\n\n5G'nin TDD modunda çalışması, tüm hücrelerin aynı anda aynı yönde (yukarı/aşağı) iletim yapmasını gerektiriyor. Saatler kayarsa hücreler birbirine girişim yapar — kapasite düşer, handover bozulur. Bu yüzden frekans senkronizasyonu için SyncE (Katman 1), zaman ve faz için IEEE 1588 PTP kullanılıyor.\n\nITU-T G.8273.2, sınır saatlerinin (T-BC) uyması gereken hatayı sınıflara ayırıyor: Sınıf B'de düğüm başına maksimum mutlak zaman hatası **70 ns**, Sınıf C'de **30 ns**. Uçtan uca bütçe ise 5G TDD radyo arayüzleri için toplamda **±1.5 µs**. Bu, 1.500 nanosaniyelik bir bütçede onlarca düğümün pay alması demek; zincirin en zayıf halkası bütçeyi belirliyor.\n\nZaman duyarlı ağlar (TSN) tarafında IEEE 802.1CMde eki, fronthaul akışları için Ethernet köprülü ağlarda gecikme sınırlarını tanımlıyor. Yani senkronizasyon artık \"radyo ekibinin işi\" değil; taşıyıcı ağ tasarımının doğrudan parçası.\n\n## Türkiye'de Saha Gerçekleri\n\nTürkiye özelinde kaynaklarda doğrudan operatör verisi bulunmuyor; aşağıdaki tablo genel eğilimlerin yerel koşullara nasıl oturduğuna dair bir çerçeve, ölçülmüş bir iddia değil.\n\nFiberin ulaşmadığı veya çekmenin maliyetli olduğu noktalarda 5G Sabit Kablosuz Erişim (FWA) öne çıkıyor. FWA üzerinden E-Line / E-LAN / E-Access servisleri, çift SIM yedekliliğiyle SLA garantili kurumsal bağlantı olarak sunulabiliyor.\n\nMetro çekirdeklerde yön n x 100G ve 400G. Optik tarafta ITU-T G.709 kapsamındaki flexible OTUCn çerçeve formatı ve G.709.1 uyarınca n x 100G FlexO devreye giriyor. Operatörlerin asıl darboğazı ise spektrum ve saha izinleri; taşıyıcı ağ modernizasyonu çoğu zaman radyo yatırımının gerisinde kalıyor.\n\n## Sonuç\n\n5G xHaul ile Metro Ethernet'in birleşimi, birbirinin yerini alan iki teknoloji değil, iki katmanın iş bölümü: altta deterministik FlexE/FGU boruları, üstte ölçeklenebilir SR/EVPN dilimleri ve her ikisinin üzerinde nanosaniye hassasiyetinde ortak bir saat.\n\nBu mimarinin olgunlaşması, operatör için maliyet tarafında da anlamlı: ayrı ayrı kurulan 4G taşıma, kurumsal Metro Ethernet ve yeni 5G altyapıları yerine tek bir birleşik metro katmanı işletmek, hem CapEx hem operasyon yükünü azaltıyor. Bulut Metro (Cloud Metro) ve niyet tabanlı otomasyon tam olarak bunu hedefliyor.\n\nBundan sonraki aşama, dilimin radyodan çekirdeğe kadar uçtan uca orkestre edilmesi. Bugün dilim çoğunlukla taşıyıcı katmanda bitiyor; 5G Advanced ve ötesinde dilimin çekirdek ağ ve uygulama katmanına kadar uzaması bekleniyor. Taşıyıcı ağ mühendisleri için bu, OAM ve senkronizasyon uzmanlığının değerinin artmaya devam edeceği anlamına geliyor.\n\n---\n\n\u003e Bu yazı hakkında\n\u003e Bu makalenin temel fikri ve çıkış noktası tamamen kişisel merakıma dayanmaktadır. İçeriğin araştırılması, derlenmesi ve yapılandırılması süreçlerinde yapay zeka teknolojilerinden yararlanılmıştır. Bu yazı mutlak bir sonuç veya nihai bir doğru sunma amacı taşımamakta; aksine, ilham verici bir bilgi paylaşımı ve yeni okumalar için bir başlangıç noktası olarak değerlendirilmek üzere yayınlanmaktadır.","tags":["ag","5g","metro-ethernet","transport"],"readTime":"6 dk","featured":false,"author":"Serhat Çetin","createdAt":"2026-11-09T12:10:41.000Z","coverImage":"/uploads/cover-5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar.jpg","url":"/blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar"},{"id":"post-1793649068156","type":"article","title":"EVREN: Millî Yapay Zekâ Platformu ve Dijital Egemenlik Hamlesi","slug":"evren-milli-yapay-zeka-platformu-dijital-egemenlik","excerpt":"EVREN, Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) himayesinde, Savunma Sanayii Yapay Zekâ Yetenek Kümelenmesi (SAYZEK) koordinasyonunda geliştirilen uçtan uca millî MLOps platformu. Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (SSB) himayesinde ve Savunma Sanayii Yapay Zekâ Yetenek Kümelenmesi (SAYZEK)...","content":"## Özet\n\nEVREN, Cumhurbaşkanlığı Savunma Sanayii Başkanlığı (**SSB**) himayesinde, Savunma Sanayii Yapay Zekâ Yetenek Kümelenmesi (**SAYZEK**) koordinasyonunda geliştirilen uçtan uca millî **MLOps** platformu.\n\n- **Ölçek (bağımsız kaynaklara göre):** ~15.000 aktif kullanıcı, 1.100 veri seti, 631 model, 14,4 milyon veri ögesi, 82,7 milyon veri etiketi.\n- **Donanım:** 64× Nvidia H200 (48'i eğitime ayrılmış), 8× RTX A6000, ~9 TB HBM3e, 47,5 PFLOPS FP16, 1.536 CPU çekirdeği, 24 TB DDR5.\n- **Modeller:** **11 açık ağırlıklı model**, OpenAI uyumlu tek API + PyPI Python SDK (Auto Router, streaming, JSON çıktı).\n- **Akademi:** YÖK genelgesi (17 Haz 2026, E-19924119-010.99-41068) ile tüm üniversitelere açıldı; e-Devlet girişi.\n- **Strateji:** Türkiye Yapay Zekâ Eylem Planı (2026–2030) ile hizalı; KVKK uyumlu veri ikametgahı.\n\n\u003e KAYNAKLAR ARASI ÇELİŞKİ\n\u003e **Model sayısı:** Bağımsız haber kaynakları **11 model** diyor; platformun açılış sayfasındaki canlı sayaç **16/16** gösteriyordu. Fark, sayacın sonradan güncellenmesinden veya sayım tanımından (çevrimiçi model vs. toplam model) kaynaklanabilir. **Hangisinin doğru olduğu doğrulanmadı** — bu notta 11 rakamı bağımsız kaynaklara dayandığı için öne çıkarıldı, ancak çelişki açıkça duruyor.\n\u003e Ayrıca \"64× H200 gerçekten kurulu mu\" sorusu hâlâ yalnızca kaynakların beyanına dayanıyor; ihracat kontrolü bağlamında bağımsız teyit yok.\n\n## 1. Giriş: Türkiye'nin Yapay Zekâ Çağındaki Stratejik Adımı\n\nCumhurbaşkanlığı Savunma Sanayii Başkanlığı (**SSB**) himayesinde ve Savunma Sanayii Yapay Zekâ Yetenek Kümelenmesi (**SAYZEK**) koordinasyonunda geliştirilen uçtan uca millî Makine Öğrenmesi Operasyonları (**MLOps**) platformu **EVREN**, Türkiye'nin yapay zekâ çağındaki teknolojik bağımsızlık ve dijital egemenlik vizyonunun en kritik kilometre taşlarından biri olarak resmen kullanıma sunuldu. İlk erişim günlerinde 7.500 ila 8.000 aktif kullanıcıya ulaşan platform, kısa süre içerisinde hızlı bir ivme yakalayarak 11.000’i aşmış ve 15.000 civarında aktif kullanıcı ölçeğine ulaşmıştır. Güncel veriler itibarıyla sistem; 1.100 veri seti, 631 model, 14,4 milyon veri ögesi ve 82,7 milyon veri etiketi barındıran devasa bir ulusal ekosisteme dönüşmüştür.\n\n**EVREN**, yalnızca basit bir \"sohbet uygulaması\" ya da dar kapsamlı bir yazılım aracı değildir. Veri hazırlamadan veri etiketlemeye, model eğitiminden test süreçlerine, yayımlamadan sahada operational kullanıma ve çıkarım (inference) süreçlerine kadar yapay zekâ projelerinin tüm yaşam döngüsünü tek bir merkezi altyapıda birleştiren yüksek performanslı bir **MLOps** platformudur. Türk savunma sanayiinin ana yüklenicilerini, KOBİ'leri, üniversiteleri, araştırmacıları ve girişimcileri ortak bir dijital ekosistemde buluşturan bu hamle, küresel ölçekte verinin ve hesaplama gücünün stratejik bir güç unsuruna dönüştüğü yeni çağda Türkiye’nin üretim kapasitesini güvence altına almaktadır.\n\n---\n\n## 2. EVREN Altyapısının Donanım Gücü ve Model Çeşitliliği\n\n### 2.1. Yüksek Hesaplama Kapasitesi ve Donanım Mimarisi\n\nEVREN altyapısı, Türkiye sınırları içerisinde konumlandırılan bare-metal GPU gücü ve yüksek başarımlı hesaplama (HPC) mimarisiyle dikkat çekmektedir. ABD lisans ve ihracat kontrollerine tabi olan Nvidia H200 gibi ileri seviye çipleri bünyesinde barındıran sistem, en karmaşık yapay zekâ modellerinin eğitimi ve çıkarım süreçlerini yüksek hızda gerçekleştirebilecek donanım kapasitesine sahiptir.\n\n| Donanım Bileşeni / Teknik Özellik | Kapasite ve Detaylar |\n| :--- | :--- |\n| **Yüksek Performanslı Model Eğitimi GPU Havuzu** | 64 × Nvidia H200 GPU (48 adedi doğrudan model eğitimine ayrılmıştır) |\n| **Görsel İşleme ve Çıkarım GPU Havuzu** | 8 × Nvidia RTX A6000 GPU |\n| **GPU Belleği (HBM3e / VRAM)** | Kart başı 141 GB HBM3e; Toplam ~9 TB (8,8 TB) Yüksek Bant Genişlikli Bellek |\n| **Hesaplama Kapasitesi** | 47,5 Petaflops (47.500 TFLOPS) FP16 Tensor Core |\n| **İşlemci (CPU) Kapasitesi** | 1.536 CPU Çekirdeği |\n| **Sistem Belleği (RAM)** | 24 TB DDR5 RAM |\n\n### 2.2. Tek API Üzerinden Erişilebilen 11 Açık Ağırlıklı Yapay Zekâ Modeli\n\nEVREN platformunun teknik evriminde kritik aşamalar kaydedilmiştir: Nisan 2026 tarihinde resmî Python SDK’sının PyPI üzerinden yayımlanmasını takiben, Eylül 2026 itibarıyla 11 açık ağırlıklı modeli içeren LLM Çıkarım Servisi tamamen kullanıma açılmıştır. Platform; OpenAI uyumlu tek bir API ve Python SDK desteği üzerinden geliştiricilere ve araştırmacılara bu 11 modeli sunmaktadır. Modeller kullanım alanlarına göre şu şekilde kategorize edilmiştir:\n\n*   **Kodlama, Akıl Yürütme ve Yapay Zekâ Ajanları:** **GLM-5.3**, **DeepSeek-V4-Flash**, **Qwen3.8-Flash-Next** ve **Gemma-4-31B** modelleri; karmaşık mantık yürütme, yazılım geliştirme, otonom kod analizi ve araç kullanan yapay zekâ ajan senaryolarında hizmet verir.\n*   **Görsel ve Video Analizi:** **Qwen3-VL-30B** modeli, çok modlu (multimodal) yapısıyla nesne tespiti, segmentasyon, sınıflandırma ile görsel ve video içeriklerinin yüksek hassasiyetle analiz edilmesini sağlar.\n*   **RAG ve Anlamsal Arama:** **Qwen3-Embedding-8B** ve **Qwen3-Reranker-8B** modelleri, kurumsal veri depolarından anlamsal olarak doğru bilgi çekmeyi sağlayan RAG (Retrieval-Augmented Generation) sistemlerini destekler.\n*   **İçerik Güvenliği:** **Qwen3-Guard-4B** modeli, üretilen içeriklerin emniyetini ve güvenlik denetimlerini yürütür.\n*   **Belge ve Ses İşleme:** **DeepSeek-OCR-2**, **dots-ocr** ve **Qwen3-ASR-1.7B** modelleri; optik karakter tanıma (OCR) ve otomasyonlu ses tanıma (ASR) görevlerini yerine getirir.\n\nPlatform ayrıca; farklı görevlerde en uygun modeli otomatik seçen Auto Router, gerçek zamanlı akışlı yanıtlar (streaming) ve standart JSON çıktı desteğiyle entegrasyon süreçlerini kolaylaştırmaktadır. PyPI üzerinden dağıtılan Python SDK sayesinde geliştiriciler, merkezi MLOps platformunda eğittikleri veya çağırdıkları modelleri doğrudan kendi yerel çalışma alanlarına ve uygulama mimarilerine bağlayarak kredi bakiyeleri üzerinden kesintisiz bir geliştirme döngüsü kurabilmektedir.\n\n---\n\n## 3. Yenilikçi Katkı Temelli Kredi Ekosistemi ve Akademi Entegrasyonu\n\n### 3.1. \"Katkı Sağla, Kredi Kazan, GPU Kullan\" Mantığı\n\nEVREN, geleneksel ücretli abonelik sistemleri yerine kullanıcıların sisteme katkı sağlamasına dayalı sürdürülebilir bir kredi ekosistemi işletmektedir. Kullanıcılar platforma veri seti yükleyerek, veri etiketleyerek veya kendi geliştirdikleri eğitilmiş modelleri toplulukla paylaşarak kredi kazanırlar. Elde edilen bu krediler, platformun yüksek kapasiteli GPU havuzunda model eğitimi veya büyük dil modeli çıkarım operasyonları için harcanır. Böylece araştırmacıların ve öğrencilerin yüksek maliyetli donanım kaynaklarına erişimindeki finansal engeller kaldırılmakta, erişim doğrudan bilimsel ve teknik üretime bağlanmaktadır.\n\n### 3.2. YÖK Genelgesi ve Üniversitelerdeki Kullanım\n\nPlatformun akademi ve genç araştırmacılarla entegrasyonu resmî adımlarla şu şekilde gerçekleşmiştir:\n\n1.  **Resmî Duyuru ve Genelge:** YÖK Bilgi İşlem Daire Başkanlığı'nın 17 Haziran 2026 tarihli resmî yazısıyla (E-19924119-010.99-41068 sayılı) EVREN MLOps platformu Türkiye'deki tüm üniversitelere duyurulmuştur.\n2.  **Kimlik Doğrulama ve Güvenli Giriş:** Akademisyenler, araştırmacılar, lisans ve lisansüstü öğrencileri platforma `evren.ssyz.org.tr` adresi üzerinden e-Devlet kapısı kimlik doğrulaması ile güvenli biçimde erişebilmektedir.\n3.  **Çalışma Alanları ve Proje Yönetimi:** Kullanıcılar sistem paneli üzerinden takımlarıyla ortak çalışma alanları oluşturabilmekte; veri seti yükleyip etiketleme yaparak H200 GPU kümesinde model eğitimlerini başlatabilmektedir.\n4.  **Akademik Donanım Engelinin Aşılması:** Lisans ve lisansüstü öğrencilerinin bitirme projelerinde ve araştırma faaliyetlerinde karşılaştıkları en büyük kısıt olan GPU yetersizliği ortadan kaldırılmış, öğrenciler veri sürümleme ve kredi yönetimi alışkanlıklarıyla sektöre hazırlanmıştır.\n\n\u003e **Önemli Tarihler ve Fırsatlar:**\n\u003e YÖK genelgesi kapsamında tanımlanan QR kodlu promosyon başlangıç kredileri (lisans öğrencileri için tanımlanan 1.000 başlangıç kredisi dâhil) **31 Temmuz 2026** tarihine kadar geçerlidir. Ayrıca, API kullanımını yaygınlaştırmak ve ekosistemi büyütmek amacıyla **1 Kasım 2026** tarihine kadar gerçekleştirilen API çağrıları kullanıcıların kredi bakiyesinden düşülmeden tamamen kredisiz ve ücretsiz olarak sunulmaktadır.\n\n---\n\n## 4. Dijital Egemenlik, Veri Güvenliği ve Ulusal Yapay Zekâ Stratejisi\n\n### 4.1. Veri İkametgahı (Data Residency) ve KVKK Uyumluğu\n\nKlasik bulut yapay zekâ servisleri kullanılırken verilerin yurt dışındaki sunuculara aktarılması, hassas sektörler için büyük bir güvenlik riski ve veri ihlali tehdidi oluşturmaktadır. EVREN platformunda ise kullanıcı istemleri (prompt), model yanıtları ve veri trafiği tamamen Türkiye sınırları içerisinde yer alan yüksek performanslı GPU altyapısında işlenmektedir. Veri ikametgahı (data residency) sağlayan bu yapı, 6698 sayılı KVKK standartlarına tam uyum sunarak savunma sanayii, kamu, finans ve kurumsal yapay zekâ projeleri için tam güvenli bir çalışma ortamı yaratmaktadır.\n\n### 4.2. Türkiye Yapay Zekâ Eylem Planı (2026–2030) ile Hizalanma\n\nEVREN, Resmi Gazete'de yayımlanarak 18 Ağustos 2026 tarihinde yürürlüğe giren ve \"Fark Et, İstifade Et, Üret ve Yönet\" ilkelerine dayanan Türkiye Yapay Zekâ Eylem Planı (2026–2030) hedefleriyle tam uyum içerisindedir. EVREN'in sunduğu altyapı, eylem planının şu temel hedeflerini doğrudan desteklemektedir:\n\n*   2030 yılına kadar en az 1 GW yapay zekâ ve veri merkezi kapasitesine ulaşılması,\n*   Ağırlıklı olarak özel sektörden 10 milyar dolarlık yatırımın harekete geçirilmesi,\n*   10 bin ileri düzey yapay zekâ uzmanı ve 100 bin uygulama profesyoneli yetiştirilmesi,\n*   Araştırmacılar, girişimciler ve KOBİ'ler için \"Herkes İçin GPU\" programının uygulanması ve Ulusal Veri Kütüphanesi vizyonunun pekiştirilmesi.\n\n### 4.3. Enerji ve Hesaplama Koridoru Vurgusu\n\nYapay zekâ altyapıları yalnızca bir yazılım meselesi değil; kesintisiz elektrik, güçlü şebekeler, soğutma sistemleri ve yüksek bant genişlikli fiber bağlantılar gerektiren devasa bir enerji hikayesidir. Türkiye, TANAP gibi projelerle Avrupa ve Asya arasında kurduğu enerji koridoru rolünü; yenilenebilir enerji yatırımları, elektrik iletim hatları ve Akkuyu Nükleer Güç Santrali ile pekiştirmektedir. 1 GW veri merkezi hedefi hayata geçtiğinde Türkiye, coğrafi avantajını dijital altyapıya taşıyarak Doğu ile Batı arasında stratejik bir \"enerji ve hesaplama koridoruna\" (energy and compute corridor) dönüşme potansiyeline sahiptir.\n\n### 4.4. Kurumlar ve KOBİ’ler İçin Operasyonel Hazırlık Rehberi\n\nEVREN platformunun sunduğu millî imkânlardan maksimum verim almak ve kurumsal sistem entegrasyonlarını sorunsuz gerçekleştirmek isteyen özel sektör kuruluşları ile KOBİ'lerin şu operasyonel hazırlık adımlarını tamamlaması önerilmektedir:\n\n*   **KVKK Veri Sınıflandırması:** Kurumsal veri setlerinin organizasyon dışına çıkıp çıkamayacağı veya yerel MLOps altyapısında işlenmeye uygunluğu detaylıca sınıflandırılmalıdır.\n*   **Standartlaştırılmış Etiketleme Kuralları:** Sınıf isimleri, etiketleme kutusu kuralları (bounding box) ve veri işleme standartları yazılı kılavuzlara dönüştürülmelidir.\n*   **Model ve Veri Eşleştirme Kayıtları:** Hangi model sürümünün hangi veri seti versiyonu ile eğitildiğini gösteren geriye dönük izlenebilirlik kayıtları tutulmalıdır.\n*   **Üniversite-Sanayi İş Birliği Fikri Mülkiyet Sözleşmeleri:** Akademik projelerde üretilen veri ve modellerin mülkiyet hakları sözleşmelerle net olarak tanımlanmalıdır.\n*   **Ara Yazılım (Middleware) Mimarisi:** Eğitilen veya API üzerinden çağrılan modelleri ERP, CRM ve saha uygulamalarına bağlayacak kimlik doğrulama, kota yönetimi, hata yakalama ve loglama ara yazılımları kurgulanmalıdır.\n\n---\n\n## 5. Sonuç ve Öne Çıkan Anahtar Çıkarımlar\n\nEVREN platformu, Türkiye'yi yapay zekâ teknolojilerini yalnızca tüketen bir ülke olmaktan çıkarıp; kendi verisini, hesaplama altyapısını ve modellerini yönetebilen küresel bir üretim merkezine dönüştürme amacını taşımaktadır. Küresel teknoloji devleriyle yüz milyarlarca dolarlık genel amaçlı model yarışına girmek yerine; savunma sanayii, otonom sistemler, endüstriyel otomasyon, robotik, tarım ve Türkçe dil modelleri gibi rekabet avantajı yüksek alanlara odaklanmak ulusal dijital egemenliğin anahtarını oluşturmaktadır.\n\nBu süreçte en kritik unsurlardan biri, **savunma sanayiinden sivil ekonomiye teknoloji transferidir** (*defense-to-civilian dual-use technology transfer*). Savunma Sanayii Başkanlığı ve SAYZEK koordinasyonunda geliştirilen bu MLOps yetenekleri ve yüksek hesaplama altyapısı; e-ticaret, perakende, finans, lojistik ve endüstriyel otomasyon gibi sivil sektörlerdeki yerli yazılım ekosistemini de doğrudan besleyerek Türkiye'nin genel ekonomik rekabetçiliğini artırmaktadır.\n\n### Öne Çıkan 5 Temel Çıkarım\n\n1. **Uçtan Uca Millî MLOps Altyapısı:** **EVREN**, SSB ve SAYZEK koordinasyonunda veri etiketlemeden H200 GPU destekli model eğitimine, testten sahada operasyonel kullanıma kadar tüm süreçleri tek bir merkezi yapıda toplamaktadır.\n2. **Kanıtlanmış Büyüme ve Ölçek:** Platform, kısa sürede 15.000'e yakın aktif kullanıcıya ulaşmış; bünyesinde 1.100 veri seti, 631 model, 14,4 milyon veri ögesi ve 82,7 milyon veri etiketi barındıran devasa bir üretim havuzu oluşturmuştur.\n3. **Katkı Temelli Ücretsiz Erişim ve Entegrasyon:** Ücretli abonelik yerine veri sağlayan, etiketleme yapan ve model paylaşan kullanıcıların kredi kazandığı sürdürülebilir bir GPU kullanım modeli işletilmekte; PyPI üzerinden sunulan Python SDK ve OpenAI uyumlu API ile yazılım ekosistemine entegre olmaktadır.\n4. **Tam Veri Egemenliği ve Çifte Kullanımlı Teknoloji Transferi:** Veri ve model trafiğinin tamamen Türkiye sınırlarındaki sunucularda işlenmesiyle KVKK uyumluğu ve veri ikametgahı sağlanmakta; savunma sanayisinde doğan teknolojik birikim sivil ekonomiye aktarılmaktadır.\n5. **Ulusal Strateji ve Enerji-Hesaplama Koridoru Vizyonu:** YÖK genelgesiyle tüm üniversitelere açılan platform; 2026–2030 Yapay Zekâ Eylem Planı hedefleri doğrultusunda Türkiye'yi Doğu ile Batı arasında bir \"enerji ve hesaplama koridoruna\" dönüştürme amacına hizmet etmektedir.\\n\\n---\\n\\n\u003e **Bu yazı hakkında**\\n\u003e\\n\u003e Bu makalenin temel fikri ve çıkış noktası tamamen kişisel merakıma dayanmaktadır. İçeriğin araştırılması, derlenmesi ve yapılandırılması süreçlerinde yapay zeka teknolojilerinden yararlanılmıştır. Bu yazı mutlak bir sonuç veya nihai bir doğru sunma amacı taşımamakta; aksine, ilham verici bir bilgi paylaşımı ve yeni okumalar için bir başlangıç noktası olarak değerlendirilmek üzere yayınlanmaktadır.","tags":["yapay-zeka","evren","mlops","ssb","sayzek","strateji","egemenlik"],"readTime":"10 dk","featured":false,"author":"Serhat Çetin","createdAt":"2026-11-02T19:51:05.000Z","coverImage":"/uploads/cover-evren-milli-yapay-zeka-platformu-dijital-egemenlik.jpg","url":"/blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik"},{"id":"post-1793205175192","type":"article","title":"Şişeden Duvar, Poşetten Yol: Plastik Atık Nasıl İnşaat Malzemesine Dönüşüyor?","slug":"siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor","excerpt":"Küresel ölçekte üretilen ve tüketilen plastik miktarı, gezegenin ekolojik taşıma kapasitesini ve atık yönetim altyapılarını ciddi şekilde zorlamaktadır. Statista verilerine göre 2019 yılında dünya genelinde yaklaşık 460 milyon metrik ton plastik kullanılmış ve 353 milyon metrik ton plastik atık ortaya çıkmıştır...","content":"## 1. Giriş ve Genel Bakış: Plastik Atık Krizinden Yapı Malzemesi Devrimine\n\nKüresel ölçekte üretilen ve tüketilen plastik miktarı, gezegenin ekolojik taşıma kapasitesini ve atık yönetim altyapılarını ciddi şekilde zorlamaktadır. Statista verilerine göre 2019 yılında dünya genelinde yaklaşık 460 milyon metrik ton plastik kullanılmış ve 353 milyon metrik ton plastik atık ortaya çıkmıştır (Minde et al., 2024). Bu devasa atık yükünün yalnızca 55 milyon metrik tonu geri dönüştürülebilirken, 174 milyon metrik tonu çöp depolama alanlarına (landfill) gömülmüş, 82 milyon metrik tonu ise denetimsiz şekilde çevreye ve su ekosistemlerine terk edilmiştir (Minde et al., 2024). 2023 yılına gelindiğinde küresel plastik üretimi yıllık %4'lük büyüme oranıyla 413,8 milyon tona ulaşmış, ancak üretilen plastiklerin %10'undan azı geri dönüşüm döngüsüne dahil edilebilmiştir (Lakas et al., 2025).\n\nDiğer taraftan, küresel inşaat sektörü benzeri görülmemiş bir doğal hammadde tüketimi baskısı altındadır. Sadece beton üretimi için her yıl yaklaşık 13,12 milyar metrik ton doğal agrega (kum, çakıl, kırma taş) çıkarılması gerekmektedir (Minde et al., 2024). Bu yüksek agrega talebi, madencilik faaliyetleri nedeniyle doğal ekosistemlerin tahrip olmasına, nehir yataklarının bozulmasına ve bakir kaynakların hızla tükenmesine yol açmaktadır.\n\nBu iki küresel krizin kesişim noktasında malzeme bilimi ve inşaat mühendisliği ekseninde yeni bir yaklaşım belirmektedir: Tek kullanımlık veya geri dönüştürülmesi zor polimerik atıkları çevre için bir tehdit (\"çöp\") olmaktan çıkarıp, altyapı ve üstyapı projelerinde yüksek performanslı bir \"yapısal hammadde\" olarak konumlandırmak. Plastik atıkların asfalt bağlayıcılarına, beton agregalarına ve taşıyıcı duvar elemanlarına entegre edilmesi, döngüsel ekonomi prensipleri çerçevesinde inşaat sektörünün karbon ayak izini ve çevresel yükünü azaltmaktadır.\n\n---\n\n## 2. Nebraska Asfalt Projesi: 2 Milyon Poşetle Serilen 1,2 Kilometrelik Yol\n\nABD'nin Nebraska eyaletine bağlı South Sioux City kentinde, geri dönüştürülmüş atık plastiklerin altyapıda kullanımına dair kapsamlı bir pilot saha uygulaması gerçekleştirilmiştir (Ensonhaber, 2026).\n\n*   **Proje Kapsamı:** Yaklaşık 2 milyon adet geri dönüştürülmüş plastik poşet işlenerek bitümlü asfalt karışımına dahil edilmiş ve bu modifiye asfalt ile Foundry Road'un 1,2 kilometrelik bölümü kaplanmıştır. Ayrıca aynı modifiye karışım, kentteki belediye bisiklet yolunun uzantısında da uygulanmıştır (Ensonhaber, 2026).\n*   **Teknik Özellikler:** Karışım tasarımında sürdürülebilirliği artırmak ve bakir agrega kullanımını kısmak amacıyla %25 oranında geri kazanılmış eski asfalt malzemesi (RAP - Recycled Asphalt Pavement) kullanılmıştır (Ensonhaber, 2026).\n*   **Finansman ve Akademik Danışmanlık:** Proje, Nebraska Çevre Vakfı (Nebraska Environmental Trust) tarafından sağlanan 500 bin dolarlık hibe desteğiyle finanse edilmiştir. Projenin akademik liderliği ve saha analizi, Nebraska-Lincoln Üniversitesi İnşaat ve Çevre Mühendisliği Bölümü Öğretim Üyesi Doç. Dr. Jamilla Teixeira tarafından yürütülmektedir (Ensonhaber, 2026).\n*   **Performans Metrikleri:** Nebraska'nın sert ve değişken iklim koşulları altında, plastik modifiyeli asfaltın üç temel laboratuvar ve saha kriteri takip edilmektedir:\n    1.  **Çatlama Dayanımı (Cracking Resistance):** Düşük sıcaklık gerilmelerine ve donma-çözülme döngülerine karşı direnç.\n    2.  **Tekerlek İzi Oluşumu (Rutting):** Yüksek sıcaklık ve ağır taşıt yükleri altında oluşan kalıcı plastik deformasyon direnci.\n    3.  **Neme Karşı Dayanıklılık (Moisture Resistance):** Suyun asfalt-agrega arayüzündeki soyma (stripping) etkisine karşı direnç (Ensonhaber, 2026).\n\n---\n\n## 3. Eco-Tec Yöntemi ve Toprak Dolgulu PET Şişe Tuğlalar\n\nGelişmekte olan ülkelerde atık yönetimi altyapısının yetersizliği nedeniyle plastik şişelerin su kanallarını tıkaması, taşkınlara ve salgın hastalıklara yol açması üzerine alternatif ve düşük maliyetli bir yapı tekniği geliştirilmiştir (Breitkopf, 2012).\n\n*   **Menşei ve Kurucu:** Alman marangoz Andreas Froese, teknik adı *Ecotec Bi4PVS* olan toprak dolgulu PET şişe ile yapı inşa etme yöntemini geliştirmiş ve 2001 yılında Eco-Tec şirketini kurmuştur (Breitkopf, 2012).\n*   **Uygulama Metodolojisi:**\n    1.  Aynı boyut ve hacimdeki PET şişeler toplanır.\n    2.  Yerel toprak, nehir kumu veya ince inşaat molozu elendikten sonra bir huni (kesilmiş şişe başlığı) ve ahşap bir çubuk yardımıyla şişelerin içine doldurularak sıkıştırılır. Şişeler bu aşamada yüksek kütleli yapısal \"tuğla\" işlevi görür (Breitkopf, 2012).\n    3.  Şişeler, harç yatağı üzerine yatay olarak dizilir. Bağlayıcı olarak yerel killi toprak (Lehm) veya nemli bölgelerde 1:6:0,5 oranında çimento-kum-kireç karışımı harç kullanılır (Breitkopf, 2012).\n    4.  İnşaat sırasında şişeler sentetik ipler veya tellerle birbirine bağlanarak geçici stabilite sağlanır. Duvar tamamlandıktan sonra, PET malzemeyi polimer bozunmasına uğratan UV ışınlarından korumak amacıyla yüzey kalın bir sıva tabakasıyla kaplanır (Breitkopf, 2012).\n*   **Detaylı Yapısal ve Mimari Detaylar:**\n    *   *Temel Ankrajı:* Duvarların ve sütunların yanal devrilmeye karşı kayma ve devrilme emniyetini sağlamak amacıyla ilk iki PET şişe sırası, beton veya moloz temel üst kotunun altına (*unterhalb der Oberkante des Fundamentes*) gömülerek ankrajlanır (Breitkopf, 2012).\n    *   *Yıldız Dizilimli Taşıyıcı Sütunlar:* Noktasal eksenel yükleri taşımak için sütun yapılarında şişeler dairesel ve yıldız şeklinde (*sternförmig verlegt*) dizilir. Sütunun merkezinde oluşan boşluk inşaat molozu, taş veya dikey donatı/ahşap kazıklarla doldurulur; şişe tabanları etrafına helezonik/spirallemesine tel/ip sarılarak yapım aşamasında dairesel form sabitlenir (Breitkopf, 2012).\n*   **Saha Uygulamaları ve Örnek Projeler:**\n    *   *Casa Ecológica* (2001, Honduras): Yaklaşık 8.000 PET şişe kullanılarak inşa edilen ilk Eco-Tec konut projesi (Breitkopf, 2012).\n    *   *Okul Binaları:* Honduras'ın Jutiapa kentinde inşa edilen okul derslikleri (Breitkopf, 2012).\n    *   *Su Depoları ve Sarnıçlar:* Roatán'da harçsız dairesel sarnıç montajlarını test etmek amacıyla deneysel olarak su veya kum dolu şişelerin dairesel istiflenmesiyle inşa edilen su depoları (*\"Zu Testzwecken wurden die Flaschen mit Wasser gefüllt\"*) (Breitkopf, 2012).\n    *   *Altyapı Elemanları:* Honduras'ta inşa edilen bir su kemeri (akvedük) ve Nijerya'da taşıyıcı şişe sütunlarının içerisinden elektrik borularının (kondüit) geçirildiği entegre uygulamalar (Breitkopf, 2012).\n*   **Ekonomik Etki:** Şişelerin ücretsiz bir atık olması ve dolgu malzemesi olarak yerel toprağın kullanılması sayesinde Eco-Tec yapıları, geleneksel tuğla/duvar örme yöntemlerine kıyasla malzeme ve yapım maliyetinde **%40 ile %50 oranında tasarruf** sağlamaktadır (Breitkopf, 2012).\n\n---\n\n## 4. Ortak Mantık: Plastik Neden Artık \"Çöp\" Değil De Değerli Bir Hammadde?\n\nNebraska'daki asfalt modifikasyon projesi ile Honduras ve Afrika'daki Eco-Tec duvar sistemleri aynı temel paradigma değişimine dayanmaktadır: **Doğada kimyasal olarak bozunması yüzlerce yıl süren sentetik polimerik atıkları, doğrudan bertaraf sahalarına göndermek yerine yüksek hacimli bir altyapı/üstyapı bileşenine dönüştürmek.**\n\nHer iki yöntemde de plastik, ya doğrusal yük taşıyıcı bir matris dolgusu ya da matris reolojisini iyileştiren bir modifiyer olarak işlev görür. Plastik atık, geleneksel \"üret-kullan-at\" modelinden çıkarılarak dairesel inşaat mühendisliğinin ana girdilerinden biri haline getirilmektedir.\n\n| Değerlendirme Parametresi | Doğrusal Bertaraf Modeli | Döngüsel İnşaat Modeli |\n| :--- | :--- | :--- |\n| **Agrega Tüketimi** | Tamamen bakir doğal kaynaklara (kum, kırma taş) bağımlıdır; yılda 13,12 milyar ton doğal agrega tüketir (Minde et al., 2024). | Doğal agrega ihtiyacını azaltır; atık plastiği hacimsel dolgu, lif veya bağlayıcı modifiyeri olarak kullanır (Breitkopf, 2012; Lakas et al., 2025). |\n| **Atık Yönetimi Yönü** | Vahşi depolama, karasal/sucul ekosistem sızıntıları veya yüksek emisyonlu yakma ile sonuçlanır (Minde et al., 2024). | Atık polimerleri asfalt veya beton matrisinin içine hapsederek çevreye salınımını engeller (Lakas et al., 2025). |\n| **Yapısal İşlev ve Katma Değer** | Nötr veya olumsuz çevresel yük oluşturur. | Asfalt esnekliğini artırır, tekerlek izi oturmasını önler veya duvarda yanal kuşatmayla basınç kapasitesini yükseltir (Breitkopf, 2012; Lakas et al., 2025). |\n\n---\n\n## 5. Mühendislik ve Bilimsel Zemin: Testler, Dayanım ve Kanıtlanmamış Yönler\n\nPlastik atık içeren yapı elemanlarının mekanik davranışı ve yük aktarım mekanizmaları standart yapı malzemelerinden farklılık gösterir. Yapılan laboratuvar testleri ve bilimsel kabuller şu şekildedir:\n\n### PET Şişe Duvar Mekaniği ve Kuşatmalı Basınç\nKum dolgulu PET şişe ve toprak harçlı duvar elemanları üzerine yapılan basınç testlerinde, bu sistemlerin **4,3 N/mm²** seviyesine kadar basınç gerilmesine dayanabildiği tespit edilmiştir (Breitkopf, 2012).\n*   **Yük Aktarım Mekanizması:** Dikey eksenel yükün yaklaşık **1/3'ünü** kum dolgulu PET şişe, **2/3'ünü** ise şişelerin etrafındaki harç ve sıva tabakası taşır (Breitkopf, 2012).\n*   **Kuşatma (Confinement) Etkisi:** Şişe içerisindeki kum dikey yük altında yanal genleşmeye (*Querdehnung*) çalışır. Ancak PET şişenin yüksek çekme dayanımına sahip polimer kılıfı bu genleşmeyi sınırlandırarak içindeki kumu kuşatır (*confinement* etkisi). Hapsedilen kum dikey yükü taşırken, kum dolgusu da PET şişenin ince cidarlarının burkulmasını (*buckling*) önler (Breitkopf, 2012).\n\n### Asfalt Stabilitesi ve Reolojik İyileşme\nTicari değeri olmayan atık plastik poşetlerin ağırlıkça %25 oranında asfalt çimentosuna (bitüm) ilave edilmesiyle elde edilen modifiye asfalt karışımlarının, standart asfalt kaplamalara kıyasla yol stabilitesini (Marshall Stabilitesi) **%30'a varan oranlarda artırdığı** kanıtlanmıştır (Lakas et al., 2025).\n\n### Beton Agregaları, Katkı Maddeleri ve Polimer Mekaniği\nBeton içerisinde agrega ikamesi olarak kullanılan plastik türlerinde optimum ikame oranları hassas dengelere dayanır. PET ince agrega ikamesinde **%10** oranı optimum mekanik performans sağlarken, Polipropilen (PP) kullanımında **%5** ikame seviyesinde basınç dayanımı kaybı minimum düzeyde kalmaktadır (Minde et al., 2024). Beton karışımına **silis dumanı (silica fume)** eklenmesi, puzolanik reaksiyon ile arayüz geçiş bölgesini (ITZ) güçlendirerek plastik agregalı betonun basınç dayanımını artırmakta ve su emme kapasitesini düşürmektedir (Minde et al., 2024).\n\n### Termoplastik ve Termoset Polimerlerin Davranış Farkı\nİnşaat mühendisliği uygulamalarında kullanılan polimerlerin termomekanik davranışları matris performansını doğrudan etkiler (Minde et al., 2024):\n*   **Termoplastikler (PET, HDPE, PP, PS):** Isıtıldığında yumuşayan ve tekrar şekillendirilebilen lineer veya dallanmış polimer zincirlerine sahiptir. Çimento matrisi ile kalıcı bir kimyasal bağ oluşturmazlar. Yüksek sıcaklıklarda veya yangın anında erime ve yumuşama gösterdiklerinden yapısal bütünlüğü riske atabilirler (Minde et al., 2024).\n*   **Termosetler (Epoksi, Poliüretan, Doymamış Polyester):** Sertleşme (kürlenme) sürecinde geri dönüşümsüz çapraz bağlı (*cross-linked*) kimyasal ağ yapısı oluştururlar. Isıtıldıklarında erimemeleri sayesinde yüksek sıcaklık dayanımı sunarlar. Beton tamirinde, güçlendirmede ve kimyasal ankrajlarda çimento yüzeyine mükemmel arayüz adhezyonu ve yüksek kesme dayanımı sağlarlar (Minde et al., 2024).\n\n### Kanıtlanmamış ve Belirsiz Yönler\n*   Plastik modifiyeli asfalt yolların tekrarlı ağır taşıt yükleri altındaki uzun dönem yorulma (*fatigue*) ve tünel etkisi deformasyon modelleri henüz tam olarak standartlaşmamıştır.\n*   PET şişeler içine doldurulan farklı zemin türlerinin ( killi zemin, dere kumu, kırma taş) zamana bağlı oturma (*settlement*) ve gevşeme karakteristikleri eksiksiz modellenememiştir.\n*   Pürüzsüz ve hidrofobik plastik yüzeyler ile hidrofilik çimento matrisi arasındaki zayıf arayüz adhezyonu (*interface bond strength*) tam olarak çözülememiş bir teknik sorundur (Minde et al., 2024).\n\n---\n\n## 6. Çevresel Denge ve Mikroplastik Riski: Gerçekler vs. Yanılsamalar\n\nPlastik atıkların altyapıda kullanımı yüksek hacimli atık bertarafı sağlarken, ekolojik risklerin ve bilimsel sınırların objektif değerlendirilmesi gerekir.\n\n### Doğrulanmış Çevresel Faydalar\nTayland'daki dört milli park topluluğunda yürütülen asfalt projesinde, 9,80 kilometrelik (29.387 m²) yol kaplamasında **30.010 kilogramlık atık plastik poşet** doğrudan vahşi depolama alanlarından uzaklaştırılarak asfalt altyapısına entegre edilmiştir (Lakas et al., 2025). Benzer şekilde Nebraska ve Honduras projelerinde milyonlarca poşet ve şişe çevreye zarar vermeden yapısal elemana dönüştürülmüştür (Ensonhaber, 2026; Breitkopf, 2012).\n\n### Potansiyel Riskler ve Literatürdeki Boşluklar\n*   **Mikroplastik Sızıntısı:** Beton veya asfalt matrisinin fiziksel aşınma, donma-çözülme döngüleri veya ağır trafik yükü altında ufalanması durumunda, malzeme içerisindeki plastiklerin çevreye mikroplastik olarak salınma riski bulunmaktadır (Minde et al., 2024).\n*   **Termal Degradasyon ve Yanma:** Termoplastiklerin düşük bozunma sıcaklıkları nedeniyle yangın anında toksik gaz salınımı yapma ve matris bütünlüğünü kaybetme riski mevcuttur (Minde et al., 2024).\n*   **Ön İşleme Karbon Yükü:** Atık plastiklerin kırılmadan önce yıkanması, kurutulması ve optik ayrıştırma tabi tutulması yüksek enerji ve su tüketimi gerektirebilir (Minde et al., 2024).\n\n\u003e **Ekolojik Gerçeklik Uyarı Kutusu:**\n\u003e Mevcut akademik literatür ve deneysel veriler, plastiğin beton veya asfalt matrisi içinde \"yüzlerce yıl boyunca hiçbir mikroplastik sızıntısı yapmadan veya fiziksel bozunmaya uğramadan tamamen hapsedildiğini\" kanıtlayamamaktadır. Bu durum, uzun süreli çevresel izleme ve süzüntü suyu (*leachate*) analizlerinin zorunluluğunu ortaya koymaktadır.\n\n---\n\n## 7. Ekonomik Analiz ve Karbon Ayak İzi Karşılaştırması\n\nİnşaatta plastik atık kullanımının iktisadi fizibilitesi, ilk yatırım maliyetleri, ön işleme giderleri ve yaşam döngüsü analizi (LCA) çerçevesinde ele alınmalıdır.\n\n*   **Doğrudan Maliyet Avantajları:**\n    *   Eco-Tec PET şişe yapı teknolojisi, doğal hammadde ve ücretsiz atık kullanımı sayesinde geleneksel kargir yapılara kıyasla yapı malzeme maliyetini **%40 ile %50 oranında düşürmektedir** (Breitkopf, 2012).\n    *   Beton üretiminde doğal agrega yerine plastik atık ikamesi, küresel ölçekte ihtiyaç duyulan 13,12 milyar tonluk doğal agrega çıkarma, kırma ve nakliye giderlerini azaltmaktadır (Minde et al., 2024).\n*   **İşleme Maliyetleri ve Piyasa Değişkenliği:**\n    *   Plastik atığın yapısal katkı haline getirilmesi için toplama, elle veya optik sensörlerle ayrıştırma, yıkama, kurutma ve kırma/granül haline getirme adımları ek maliyet oluşturur (Minde et al., 2024).\n    *   Bakir doğal agregaların bölgesel temin kolaylığı ve fiyatı ile işlenmiş plastik hurdası fiyatları arasındaki dalgalanmalar, projelerin finansal geri dönüş süresini doğrudan etkilemektedir (Minde et al., 2024).\n\n---\n\n## 8. Riskler, Sınırlamalar ve Mühendislik Denetimi İhtiyacı\n\nPlastik atıkların yapı malzemesi olarak ticari ölçekte yaygınlaşmasının önündeki en büyük engel mühendislik sınırlamaları ve standart eksikliğidir.\n\n*   **Standart ve Mevzuat Eksikliği:** Yapı sektöründe plastik atık kullanımına dair uluslararası düzeyde kabul görmüş resmi yapı kodları (*building codes*), standart test protokolleri ve yönetmelikler henüz tamamlanmamıştır (Minde et al., 2024).\n*   **Yapısal Sınırlamalar ve Burkulma:** Eco-Tec yöntemiyle inşa edilen düz PET şişe duvarlar yanal yüklere ve rüzgar gerilmelerine karşı zayıftır. Bu nedenle yapının burkulmaya (*buckling*) karşı direnç kazanması için planların **dairesel tasarlanması**, yanal payandalarla desteklenmesi veya şişelerin yıldız şeklinde dizilerek iç kısımlarına moloz/donatı yerleştirilen taşıyıcı sütunlar oluşturulması zorunludur (Breitkopf, 2012).\n*   **Yangın Tehlikesi ve Arayüz Sıva Adhezyonu:** Termoplastiklerin düşük erime sıcaklığı yapının yangın dayanımını düşürür (Minde et al., 2024). Ayrıca PET şişelerin pürüzsüz ve hidrofobik yüzeyleri nedeniyle harç ve sıvanın tutunması zayıftır; dış sıvanın yapışabilmesi için şişe tabanlarına **kümes teli / çelik sıva filesi (*Maschendraht*)** sarılması veya mekanik ankraj ağlarının oluşturulması zorunludur (Breitkopf, 2012; Minde et al., 2024).\n\n---\n\n## 9. Dünyadan Diğer Uygulama Örnekleri: Küresel Deneyimler\n\nPlastik atıkların altyapı ve yapı elemanlarında kullanımı küresel ölçekte farklı projelerde test edilmektedir:\n\n| Ülke / Proje | Plastik Türü ve Oranı | Uygulama Alanı | Akademik/Sektörel Kaynak |\n| :--- | :--- | :--- | :--- |\n| **Tayland** *(Milli Park Toplulukları)* | Ticari olmayan atık plastik poşet (%25 ağırlıkça) | Asfalt kaplama yollar (9,80 km / 29.387 m²) | Lakas et al., 2025 |\n| **Hollanda** *(Eco-beams Projesi)* | Kırpılmış HDPE (%1–2) | Binalar için prekast beton kirişler | Minde et al., 2024 |\n| **Avustralya** *(Waste-to-Resource Concrete)* | PET lifleri (%1,5) | Ön üretimli (prekast) beton paneller | Minde et al., 2024 |\n| **İskoçya** *(Green Roads Initiative)* | Karışık plastik atık (%10'a kadar) | Saha deneme yolları ve alt temel | Minde et al., 2024 |\n| **Belçika** *(Project NEXT)* | Geri dönüştürülmüş HDPE pulları (%5) | Sel koruma sistemleri için beton bloklar | Minde et al., 2024 |\n| **Hindistan** *(Recycled Plastic Roads)* | Karışık plastik atık (%6) | Otoyol kaplama projeleri | Minde et al., 2024 |\n| **ABD** *(Nebraska / South Sioux City)* | Geri dönüştürülmüş plastik poşet (~2 milyon adet, %25 RAP) | Asfalt yol (1,2 km) ve bisiklet yolu | Ensonhaber, 2026 |\n\n---\n\n## 10. Gelecek Perspektifi ve Türkiye İçin Uygulanabilirlik Senaryoları\n\nUluslararası saha deneyimleri ve akademik bulgular ışığında, bu teknolojilerin Türkiye'de uygulanabileceği üç temel senaryo öngörülmektedir:\n\n1.  **Kırsal ve Köy Yolları ile Bisiklet Yolları:**\n    Tayland ve Nebraska modellerinde olduğu gibi, düşük trafik hacmine sahip ilçe, köy ve tarımsal ulaşım yollarında, ayrıca belediyelerin bisiklet ve yürüyüş yollarında plastik modifiyeli asfalt kullanımı teşvik edilebilir. Bu uygulama, hem yerel atık poşetlerin toplanmasını sağlar hem de asfaltın su geçirimsizliğini ve çatlama direncini artırır (Ensonhaber, 2026; Lakas et al., 2025).\n2.  **Deprem Sonrası Hızlı Barınma ve Geçici/Kalıcı Yapılar:**\n    Doğal afetler sonrasında acil barınma ihtiyacını karşılamak amacıyla Eco-Tec PET şişe yöntemi değerlendirilebilir. Bu teknik, nitelikli işçilik gerektirmemesi, maliyetinin geleneksel yapılara göre %40-50 düşük olması ve deprem sarsıntılarına karşı yüksek esneklik göstermesi nedeniyle afet bölgelerinde bahçe duvarı, depolama alanı ve geçici toplum merkezlerinin inşasında hızlı bir çözüm sunar (Breitkopf, 2012).\n3.  **Kentsel Atık Yönetimi ve Prekast Beton Entegrasyonu:**\n    Büyükşehir belediyelerinin geri dönüşüm tesislerinde ayrıştırılan HDPE ve PET atıkları, kent mobilyaları, kaldırım taşları, şev koruma blokları ve kanalizasyon altyapı elemanlarında ince agrega veya lif olarak kullanılabilir (Minde et al., 2024).\n\n---\n\n## 11. Eylem Planı ve Somut Tavsiyeler Listesi\n\nPlastik atıkların inşaat sektörüne güvenli ve efektif entegrasyonu için stratejik eylem maddeleri aşağıda gruplandırılmıştır:\n\n### Belediyeler ve Yerel Yönetimler İçin:\n- **1. Tesis Altyapısı Oluşturma:** Atık plastik poşet ve şişelerin inşaat kalitesinde granül/pula dönüştürülmesi için belediye bünyesinde kırma ve optik ayrıştırma tesisleri kurmak (Minde et al., 2024).\n- **2. Pilot Yol Projeleri Başlatmak:** Düşük trafikli tali yollarda ve bisiklet parkurlarında %25 plastik katkılı asfalt deneme kaplamaları uygulamak (Ensonhaber, 2026; Lakas et al., 2025).\n- **3. Yeşil Kamu İhale Kriterleri Getirmek:** Kamu altyapı ihalelerinde belirli oranda geri dönüştürülmüş polimer kompozit malzeme kullanımını zorunlu veya avantajlı hale getirmek.\n- **4. Park ve Parkur Yapılarında Eco-Tec Yöntemini Kullanmak:** Park istinat duvarları, kamu bahçe engelleri ve peyzaj elemanlarında toprak dolgulu PET şişe mimarisini uygulamak (Breitkopf, 2012).\n\n### Girişimciler, Mühendisler ve Sanayi İçin:\n- **5. İşleme ve Şartlandırma Hatlarına Yatırım Yapmak:** Beton hatlarına uygun standart boyutlarda PET/HDPE kırması ve lifi üretecek mekanik kırma-yıkama tesisleri geliştirmek (Minde et al., 2024).\n- **6. Üniversite-Sanayi İşbirliğiyle Karışım Tasarımı Geliştirmek:** Silis dumanı ve plastik fiber kombinasyonlu optimum beton reçetelerini standartlaştırmak (Minde et al., 2024).\n- **7. Prekast Plastik-Beton Ürünleri Geliştirmek:** Sel engelleme blokları, kaldırım taşları ve yalıtım panelleri gibi ön üretimli kompozit ürün serileri imal etmek (Minde et al., 2024).\n- **8. Kalite Kontrol Laboratuvarları Kurmak:** Plastik katkılı ürünlerin çatlama, tekerlek izi, aşınma ve basınç limitlerini sürekli test edecek izleme birimleri oluşturmak (Ensonhaber, 2026; Minde et al., 2024).\n\n### Bireyler ve Toplum İçin:\n- **9. Kaynağında Ayrıştırma Disiplini Edinmek:** Evsel atıklarda PET şişe, HDPE kaplar ve poşetleri organik atıklardan tamamen ayırarak kaynağında temiz toplama sağlamak (Minde et al., 2024).\n- **10. Topluluk Tabanlı Yapı Atölyelerine Katılmak:** Kırsal alanlarda bahçe duvarı ve basit yapılar için toprak dolgulu ekolojik tuğla (eco-brick) hazırlama imece faaliyetleri düzenlemek (Breitkopf, 2012).\n- **11. Depozito İade Sistemlerini Desteklemek:** Plastik ambalajların sanayi döngüsüne kesintisiz girmesini sağlayan depozito mekanizmalarına aktif katılım göstermek (Minde et al., 2024).\n- **12. Farkındalık ve Algı Değişimi Oluşturmak:** Plastik atıkların bir \"çevre kirliliği\" değil, doğru mühendislikle \"yapısal bir değer\" olduğu yönünde toplumsal bilinci artırmak (Minde et al., 2024; Lakas et al., 2025).\n\n\n---\n\n## Kaynakça\n\n1. Ensonhaber (2026) — *2 milyon plastik poşeti asfalta karıştırdılar: 1,2 kilometrelik yol yaptılar*. https://www.ensonhaber.com/2-milyon-plastik-poseti-asfalta-karistirdilar-12-kilometrelik-yol-yaptilar-h1571641\n2. Sözcü (2026) — *Tuğlaların yerine kumla doldurulmuş pet şişe kullanmaya başladılar*. https://www.sozcu.com.tr/tuglalarin-yerine-kumla-doldurulmus-pet-sise-kullanmaya-basladilar-p365145\n3. Sözcü (2026) — *İnşaatlarda tuğla yerine pet şişe kullanmaya başladılar*. https://www.sozcu.com.tr/amp/insaatlarda-tugla-yerine-pet-sise-kullanmaya-basladilar-p359835\n4. Breitkopf (2012) — *Eco-Tec Bi4PVS — Endversion BSC* (Eco-Tec yapım kılavuzu, eco-tecnologia.com). https://www.eco-tecnologia.com/phocadownload/descargas/Endversion_BSC.pdf\n5. Smithsonian Magazine — *Waste Into Walls: Building Casas Out of Sand*. https://www.smithsonianmag.com/arts-culture/waste-into-walls-building-casas-out-of-sand-126682818/\n6. University of Nebraska–Lincoln (2025) — *Nebraska Engineering paves way for plastic road in South Sioux City*. https://news.unl.edu/article/nebraska-engineering-paves-way-for-plastic-road-in-south-sioux-city\n7. The Economic Times (2025) — *In 2025, Nebraska put two million plastic bags into a 4000-foot road*. https://m.economictimes.com/news/international/us/science-news-in-2025-nebraska-put-two-million-plastic-bags-into-a-4000-foot-road-it-became-the-states-first-recycled-plastic-road/articleshow/133925704.cms\n8. Times of India (2019) — *Los Angeles tested a road mix made from old asphalt and recycled plastic bottles*. https://timesofindia.indiatimes.com/world/us/in-2019-los-angeles-tested-a-road-mix-made-from-old-asphalt-and-recycled-plastic-bottles-aiming-to-repave-streets-without-adding-new-asphalt/articleshow/134587589.cms\n9. Minde et al. (2024) — *Comprehensive review on the use of plastic waste in sustainable concrete construction* (NBN). https://nbn-resolving.org/urn:nbn:de:101:1-2412302114177.693660113181\n10. Lakas et al. (2025) — *Development of a plastic waste-modified asphalt model for sustainable road construction* (Macquarie University). https://researchers.mq.edu.au/en/publications/development-of-a-plastic-waste-modified-asphalt-model-for-sustain/\n11. arXiv (2005.11452) — *Sand-Filler Structural Material with Low Content of Polyethylene Binder*. https://arxiv.org/pdf/2005.11452\n12. *Reusing waste plastic bottles as an alternative sustainable building material* (Walisongo Üniversitesi, Vol. 24). https://pendidikankimia.walisongo.ac.id/wp-content/uploads/2018/09/9-Vol-24.pdf\n\n---\n\u003e Bu yazı hakkında\n\u003e Bu makalenin temel fikri ve çıkış noktası tamamen kişisel merakıma dayanmaktadır. İçeriğin araştırılması, derlenmesi ve yapılandırılması süreçlerinde yapay zeka teknolojilerinden yararlanılmıştır. Bu yazı mutlak bir sonuç veya nihai bir doğru sunma amacı taşımamakta; aksine, ilham verici bir bilgi paylaşımı ve yeni okumalar için bir başlangıç noktası olarak değerlendirilmek üzere yayınlanmaktadır.","tags":["Plastik Atık","Geri Dönüşüm","İnşaat Malzemeleri","Sürdürülebilirlik"],"readTime":"17 dk","featured":false,"author":"Serhat Çetin","createdAt":"2026-10-28T16:32:52.000Z","coverImage":"/uploads/cover-siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor.jpg","url":"/blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor"},{"id":"post-9","type":"article","title":"Dijital Egemenlik Yarışı: Washington'dan Ankara'ya Yapay Zekâ Güçleri","slug":"dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka","excerpt":"Yapay zekâ artık bir yazılım meselesi değil, uçtan uca jeopolitik bir hesap. ABD sermaye ve hesaplama gücüyle, Çin verimlilik ve fiziksel entegrasyonla liderliğe gidiyor; Avrupa düzenleyici kimliğe hapsolup geride kalıyor. Bu makalede üç kıtanın stratejisini, AB'nin AI Continent Action Plan'ını ve Türkiye'nin savunma sanayiinden başlayan egemenlik arayışını inceliyor; Türkiye ve benzer ölçekli ülkeler için 15 maddelik bir yol haritası sunuyoruz.","content":"## 1. ABD ve Çin: İki Dev, İki Farklı Liderlik Yaklaşımı\n\nKüresel yapay zekâ ekosistemi, iki zıt kutbun stratejik ve teknolojik doktrinleri arasındaki gerilimle şekillenmektedir. Amerika Birleşik Devletleri, liderliğini \"hesaplama gücü (compute) ve sermaye yoğunluğu\" üzerine inşa ederken; Çin, \"Full-stack\" (tam yığın) yaklaşımıyla verimlilik, yaygın benimseme ve fiziksel dünya entegrasyonuna odaklanmaktadır.\n\nABD tarafında sermaye gücü, jeopolitik bir kaldıraç olarak kullanılmaktadır. Microsoft’un 2025 yılı yapay zekâ sermaye harcaması tek başına 80 milyar dolara ulaşırken, \"Big Tech\" (Alphabet, Amazon, Meta, Microsoft) grubunun 2026 yılı yatırım projeksiyonu 650 milyar dolar seviyesindedir. Amerikan veri merkezleri, gigavat ölçekli enerji talepleriyle yüz binlerce yeni nesil hızlandırıcıyı (GPU) devreye almaktadır.\n\nPekin ise ABD’nin ihracat kontrolleri ve sermaye kısıtlarına karşı \"model verimliliği\" odaklı bir savunma hattı kurmuştur. DeepSeek gibi laboratuvarlar, \"sparse attention\" (seyrek dikkat) mimarisi ve 4-bit kuantizasyon teknikleriyle kısıtlı donanımdan maksimum performans elde etmektedir. \"AI Plus\" girişimiyle yapay zekâyı imalat ve sağlık gibi fiziksel sektörlere entegre eden Çin, ekonomik verimlilikte çarpan etkisi hedeflemektedir. Huawei’nin Ascend 950PR çipi, geliştiricilerin geçişini kolaylaştırmak için CUDA uyumlu bir mimariye yönelmiş ve 2025’te yerli pazarda %41 paya ulaşmıştır.\n\n| Teknoloji / Platform | Çin Yerli Alternatifi (Huawei/Cambricon) | ABD / Küresel Standart | 2025-2026 Projeksiyonu |\n| :--- | :--- | :--- | :--- |\n| **Yapay Zekâ Çipi** | Huawei Ascend 950PR (CUDA uyumlu) | Nvidia Blackwell / H100 | Çin pazarında yerli payı %41 |\n| **Yazılım Ekosistemi** | Huawei CANN | Nvidia CUDA | Donanım-yazılım tam entegrasyonu |\n| **Hızlandırıcı Üretimi** | Cambricon Accelerators | Nvidia GB200 NVL72 | 2026'da 500 bin birim hedefi |\n| **Sunucu İşlemcisi** | Kunpeng 920 | x86 Tabanlı (Intel/AMD) | 100.000 wafer/yıl üretim artışı |\n\n## 2. Geleceğin Yörüngesi: Önümüzdeki 3-10 Yılın Projeksiyonu\n\nYapay zekâ yarışı, salt yazılım geliştirmeden \"fiziksel dünyada varlık gösterme\" (Embodied AI) aşamasına evrilmektedir. Gelecek on yıla damgasını vuracak stratejik trendler şunlardır:\n\n1.  **Fiziksel Entegrasyon ve Robotik:** AGI (Yapay Genel Zeka) arayışından ziyade, yapay zekânın otonom araçlar ve insansı robotlar üzerinden üretim hatlarına inmesi belirleyici olacaktır. Çin’in 2025’te 5.000’den fazla insansı robotu sahaya sürmesi bu trendin öncüsüdür.\n2.  **Enerji Darboğazı ve Altyapı Avantajı:** IEA öngörülerine göre ABD veri merkezlerinin enerji talebi 2030'da toplam tüketimin %9'una ulaşacaktır. Çin, 2025'te eklediği 540 GW’lık yenilenebilir kapasiteyle bu darboğazı aşmada stratejik bir üstünlüğe sahiptir.\n3.  **Açık Kaynak Yayılımı:** ABD kapalı modellerle ticari liderliği korumaya çalışırken; Çin, Qwen ve DeepSeek gibi açık kaynaklı modellerle küresel dijital altyapıyı domine etmeyi hedefleyecektir.\n4.  **Algoritmik Distilasyon ve Kuantizasyon:** İhracat yasakları nedeniyle düşük bitli kuantizasyon ve model damıtma (distillation) teknikleri zorunlu standartlar haline gelecektir.\n5.  **Egemen Veri ve Hesaplama Kaleleri:** Ülkeler, veri güvenliği için ulusal gigafabrikalar ve egemen bulut sistemleri kurma yarışına girecektir.\n\n## 3. Avrupa Neden Geride Kaldı? Yapısal Engellerin Anatomisi\n\nAvrupa, teknoloji ekosistemini geliştirmek yerine \"düzenleyici\" (regulator) kimliğine hapsolmuş, bu durum rekabet gücünü felç etmiştir.\n\n*   **Engel:** Parçalı Sermaye ve Yatırım Yapısı.\n    **Sonuç:** ABD’deki trilyon dolarlık devlerin yatırım kapasitesine karşın, Avrupa’nın bölünmüş sermaye piyasaları büyük ölçekli altyapı projelerini finanse etmekte yetersiz kalmaktadır.\n*   **Engel:** Yüksek Enerji ve İşletme Maliyetleri.\n    **Sonuç:** Veri merkezleri için gereken devasa enerji ihtiyacı, Avrupa’daki enerji fiyatları nedeniyle karşılanamamakta, teknoloji yatırımları kıta dışına kaçmaktadır.\n*   **Engel:** Bürokratik Düzenleme Baskısı (AI Act).\n    **Sonuç:** Özellikle küçük ve orta ölçekli yenilikçiler, sert uyum süreçleri altında ezilmekte, inovasyon hızı yavaşlamaktadır.\n*   **Engel:** Nitelikli Beyin Göçü.\n    **Sonuç:** En yetenekli Avrupalı araştırmacılar, daha yüksek hesaplama gücü ve araştırma bütçesi sunan ABD menşeli laboratuvarlara transfer olmaktadır.\n\n## 4. Avrupa'nın \"AI Continent\" Hamlesi ve Gigafactory Vizyonu\n\nAvrupa Birliği, 2025-2026 stratejik planı (AI Continent Action Plan) ile bu makası kapatmayı hedeflemektedir. Plan, düzenlemeden ziyade endüstriyel kapasite inşasına odaklanmaktadır.\n\n*   **AI Fabrikaları ve Gigafabrikalar:** AB, dünya standartlarında bir ağ oluşturmak üzere en az 15 adet \"AI Factory\" kurmayı planlamaktadır. Gigafactory vizyonunda ise stratejik bir ayrım yapılmıştır: Toplam 7 tesis hedeflenmekte; bunlardan 4’ü orta ölçekli (75.000 hızlandırıcı), 3’ü ise büyük ölçekli (en az 100.000 hızlandırıcı) kapasiteye sahip olacaktır.\n*   **Finansal Mobilizasyon ve Mevzuat:** InvestAI üzerinden 20 milyar euro kamu ve özel sermayenin harekete geçirilmesi hedeflenirken, Cloud and AI Development Act (CADA) ile yerli bulut altyapısı teşvik edilmektedir. \"Buy European AI\" politikasıyla kamu tedarikinde yerli çözümlere öncelik verilmesi planlanmaktadır.\n\n**Planlanan Eylem vs. Finansal/Teknik Gerçeklik:** AB’nin bu planı, Open Future Foundation tarafından \"riskli bir egemenlik bahsi\" olarak nitelendirilmektedir. Zira gigafabrikaların \"fabrikası\" Avrupa’da olsa da, içindeki \"motorlar\" (Nvidia/US GPU’ları) hâlâ ithal edilmektedir. Ayrıca, 30 milyar euroluk hedef bütçenin sadece 1 milyar eurosu kesinleşmiş durumdadır; geri kalanı üye devletlerin eşleşen fonlarına ve belirsizliğini koruyan 2028-2034 Çok Yıllı Finansal Çerçeve (MFF) bütçesine endekslidir.\n\n## 5. Türkiye: Savunma Sanayiinden Süperbilgisayarlara Egemenlik Arayışı\n\nTürkiye, yapay zekâ altyapısını bir ulusal güvenlik ve egemenlik meselesi olarak konumlandırmıştır. Savunma sanayii odaklı teknolojik birikim, sivil ve akademik altyapıyla birleşmektedir.\n\n## Türkiye'nin Mevcut Teknolojik Envanteri:\n*   **ARF Süper Bilgisayarı:** TÜBİTAK bünyesinde 80 binden fazla işlemci çekirdeği, 312 GPU ve 14 PB depolama kapasitesiyle devreye alınmıştır.\n*   **Kuantum Entegrasyonu:** ARF sistemine en az 20 fiziksel süper iletken kubit içeren yerli bir kuantum bilgisayarın entegre edilmesi hedeflenmektedir.\n*   **Gölge Süper Bilgisayar (Shadow Supercomputing):** Kamu sektöründeki atıl GPU kaynaklarının taşkın modelleme ve AI iş yükleri için dağıtık bir yapıda fırsatçı kullanımı (DSİ 2026 bülteni kapsamında) stratejik bir inovasyon olarak öne çıkmaktadır.\n*   **MareNostrum5 Ortaklığı:** Türkiye; İspanya ve Portekiz ile dünyanın en güçlü 35. süper bilgisayarı olan MareNostrum5 konsorsiyumunda aktif ortaktır.\n*   **Otonom Savunma Sistemleri:** Baykar'ın Kızılelma, Akıncı ve Kemankeş platformları, \"Özgün Yapay Zekâ Sistemi\" ve ASW (Denizaltı Savunma Harbi) sinyal işleme yetenekleriyle sahadaki en somut başarı örnekleridir.\n\n## 6. Benzer Ölçekli Ülkelerin Stratejik Hedefleri\n\nDijital egemenlik arayışında orta ölçekli güçler hibrit modeller geliştirmektedir.\n\n**Hindistan:** Delhi Zirvesi’nde vurgulandığı üzere, Hindistan bir yandan ABD tedarik zincirlerine bağımlılığını sürdürürken, diğer yandan açık kaynaklı modelleri ulusal bir kamu hizmeti (digital public infrastructure) olarak sunmaktadır.\n**Güney Kore ve Polonya:** Bu ülkeler, GPU donanımında bağımlı kalsalar da, siber güvenlik ve yarı iletken bileşenlerinde \"vazgeçilmez tedarikçi\" statüsü kazanmaya çalışmaktadır.\n**Orta Doğu ve Afrika:** Suudi Arabistan ve BAE finansal güçle devasa GPU kümeleri kurarken; Afrika, yapay zekâ maliyetlerini düşürmek için kıtasal bir \"AI Fonu\" oluşturma çabasındadır.\n\n## 7. Uygulanabilir Yol Haritası: Türkiye ve Gelişmekte Olan Ülkeler İçin 15 Tavsiye\n\n1.  **Enerji-Veri Merkezi Senkronizasyonu:** Veri merkezleri gigavat ölçekli enerji hatlarına doğrudan bağlanmalı, yenilenebilir enerji teşvikleri bu tesislere yönlendirilmelidir.\n2.  **Stratejik Yatırım Statüsü:** AI Gigafabrikası ve veri merkezi yatırımları için bürokratik süreçleri haftalara indirecek \"hızlandırılmış izin\" mekanizmaları kurulmalıdır.\n3.  **Açık Kaynak ve Model Ağırlıkları:** Ulusal AI modelleri, yerli ekosistemi beslemek adına açık kaynaklı \"model ağırlıkları\" (weights) ile erişime açılmalıdır.\n4.  **\"Buy Local AI\" Kanunu:** Kamu ihalelerinde yerli AI modellerine ve yerli veri merkezlerine yasal öncelik tanınmalıdır.\n5.  **GPU Kooperatifleri:** Küçük girişimlerin erişemeyeceği işlemci gücü, devlet destekli GPU havuzları üzerinden paylaşıma sunulmalıdır.\n6.  **Full-Stack Ar-Ge Odaklılığı:** Sadece yazılıma değil, yerli çip tasarımlarının yerli modellerle optimize çalışmasını sağlayacak tam yığın Ar-Ge'ye yatırım yapılmalıdır.\n7.  **Gölge Süper Bilgisayar Ağının Genişletilmesi:** Kamudaki tüm atıl GPU kapasitesi, ulusal bir ağ üzerinden AI eğitim iş yüklerine dahil edilmelidir.\n8.  **Uzay Tabanlı Yapay Zekâ:** Savunma sanayii yetkinliği, Baykar'ın Fergani girişimi gibi projelerle uydu zekâsı ve uzay tabanlı AI uygulamalarına aktarılmalıdır.\n9.  **Eğitim Reformu:** AI okuryazarlığı ilk öğretim müfredatına dahil edilmeli, disiplinlerarası AI enstitüleri yaygınlaştırılmalıdır.\n10. **Güvenli Veri Laboratuvarları (Data Labs):** Kamu verileri anonimleştirilerek araştırmacılara kontrollü ortamlarda açılmalıdır.\n11. **Uluslararası Standart Uyumu:** ABD’nin CAISI (Yapay Zeka Standartları ve İnovasyon Merkezi) benzeri bir yapı ile ulusal güvenlik ve etik standartları belirlenmelidir.\n12. **Beyin Göçünü Tersine Çevirme:** Diaspora araştırmacılarına yüksek başarımlı hesaplama (HPC) kaynaklarına uzaktan erişim ve özel araştırma fonları sağlanmalıdır.\n13. **Bulut Özgürlüğü Yasası:** Verilerin yabancı sağlayıcılarda kilitli (locked-in) kalmasını önleyecek birlikte çalışabilirlik zorunlulukları getirilmelidir.\n14. **Yarı İletken Ortaklıkları:** MareNostrum5 örneğindeki gibi uluslararası konsorsiyumlara katılım artırılarak kritik donanım üretimine ortak olunmalıdır.\n15. **Sektörel Dikey Uzmanlık:** Sağlık, tarım ve savunma gibi Türkiye’nin güçlü olduğu alanlarda dikey AI modelleri geliştirilmelidir.\n\n## 8. Sonuç: Küresel Güç Dengesinde Yapay Zekâ Sentezi\n\nYapay zekâ yarışı artık sadece en zeki algoritmayı yazma yarışı değil; bu algoritmaları besleyecek enerjiyi üretme, çalıştıracak çipi tasarlama ve sahadaki otonom sisteme entegre etme yarışıdır. ABD sermaye ve hesaplama gücüyle \"en güçlü\" modelleri yapmaya devam etse de; Çin, verimlilik ve fiziksel entegrasyonla bu teknolojiyi ekonominin kılcal damarlarına yaymaktadır.\n\nTürkiye için stratejik çıkış yolu, savunma sanayii ile kanıtladığı \"altyapı egemenliği\" ve \"otonom sistem uzmanlığı\"nı sivil alana tahvil etmektir. Kazananın sadece modelleri üreten değil, bu modelleri en verimli şekilde toplumun geneline yayan aktör olacağı bu yeni dönemde; Türkiye \"açık kaynak\" stratejisini bir kaldıraç olarak kullanmalı, HPC kapasitesini kuantum yetkinliğiyle birleştirerek bölgesel bir teknoloji kalesi haline gelmelidir. Dijital egemenlik, artık bir tercih değil, tam bağımsızlığın yeni adıdır.\n\n## 9. Kaynakça ve Atıf Bilgisi\n\n*   Anadolu Ajansı (AA), \"ARF'a Kuantum Bilgisayar Entegre Edilecek\" Raporu, 2025.\n*   Avrupa Komisyonu, \"AI Continent Action Plan\" Politika Bildirgesi, 2025.\n*   Brookings Institution, \"Competing AI Strategies for the US and China\" (Kyle Chan), 2026.\n*   BAYKAR Teknoloji, \"Geleceğimiz ve Yapay Zeka Envanteri\" Dokümanı, 2026.\n*   Devlet Su İşleri (DSİ) Teknik Bülteni, Sayı 147, \"Gölge Süper Bilgisayar\" (Önder Karagöz, Salih Babagiray), Ocak 2026.\n*   Open Future Foundation, \"The Shaky Sovereignty Bet Behind EU’s AI Gigafactories\" Analizi, 2026.\n*   TÜBİTAK, \"Yapay Zeka Süper Bilgisayar Yatırım Programı Verileri\", 2025.\n*   World Scientific Publishing, \"AI and Global Power Shifts: US-China Rivalry\", 2026.\n\n---\n\n\u003e **Bu yazı hakkında**\n\u003e\n\u003e Bu makalenin temel fikri ve çıkış noktası tamamen kişisel merakıma dayanmaktadır. İçeriğin araştırılması, derlenmesi ve yapılandırılması süreçlerinde yapay zeka teknolojilerinden yararlanılmıştır. Bu yazı mutlak bir sonuç veya nihai bir doğru sunma amacı taşımamakta; aksine, ilham verici bir bilgi paylaşımı ve yeni okumalar için bir başlangıç noktası olarak değerlendirilmek üzere yayınlanmaktadır.","tags":["AI","GenAI","Yapay Zeka \u0026 Jeopolitik","Dijital Egemenlik"],"readTime":"8 dk","featured":false,"author":"Serhat Çetin","createdAt":"2026-09-26T21:18:20.930347Z","coverImage":"/uploads/cover-1790521620449-72dcf1e0.jpg","url":"/blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka"},{"id":"post-8","type":"article","title":"Dijital Geleceği İnşa Etmek: Code.org'dan CodeAI'ya Bilgisayar Bilimi Eğitiminin Dönüşümü ve Türkiye","slug":"code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye","excerpt":"Bugün yapay zekanın her alana nüfuz ettiği bir çağda, öğrencileri teknolojinin pasif tüketicisi olmaktan çıkarıp aktif üreticiye dönüştürmek kritik bir görev. Bu makale Code.org'un neden kurulduğunu, CodeAI'ya nasıl evrildiğini ve Türkiye'nin bu dönüşümde ne yaptığını, ne yapması gerektiğini ele alıyor.","content":"# Dijital Geleceği İnşa Etmek: Code.org’dan CodeAI’ya Bilgisayar Bilimi Eğitiminin Dönüşümü ve Türkiye\n\n## 1. Giriş: Dijital Okuryazarlıktan Dijital Akıcılığa\n\nYapay zekanın (AI) her alana nüfuz ettiği bir çağda, eğitim sistemlerinin en stratejik misyonu, bireyleri sadece teknolojinin pasif tüketicileri olmaktan çıkarıp, teknolojik değer üreten aktif özneler haline getirmektir. Günümüzde \"dijital okuryazarlık\" kavramı, yerini teknolojiyi anlama, yönlendirme, sorgulama ve onunla yaratma yeteneği olarak tanımlanan \"dijital akıcılığa\" (Digital Fluency) bırakmaktadır. CodeAI kurucusu Hadi Partovi’nin vurguladığı gibi: **\"Öğrenciler ya dünyalarını şekillendiren sistemleri anlayacak ya da onlardan şekillenecekler.\"** Bu makalede, küresel ölçekte bilgisayar bilimi eğitiminin geçirdiği dönüşümü ve Türkiye'nin bu dönüşümdeki stratejik konumunu analiz edeceğiz.\n\n## 2. Code.org Neden Kuruldu? Bir Vizyonun Doğuşu\n\n2013 yılında Hadi ve Ali Partovi kardeşler tarafından kurulan Code.org, bilgisayar bilimini K-12 düzeyinde \"temel bir hak\" haline getirme vizyonuyla yola çıktı. Kuruluşun temel taşlarını şu önemli noktalar oluşturmuştur:\n\n*   **Steve Jobs'un Mirası:** Hadi Partovi, 2011 yılında Steve Jobs'un ölümüyle tetiklenen bir düşünce süreciyle, her öğrenciye kendi geleceğini kodlama fırsatı sunmayı kişisel bir miras hedefi olarak belirlemiştir.\n*   **Küresel Farkındalık:** Mark Zuckerberg ve Bill Gates gibi isimlerin yer aldığı lansman videosu, bilgisayar programlamanın \"yeni bir süper güç\" olduğu mesajını milyonlara ulaştırmıştır.\n*   **Hour of Code (Kodlama Saati):** 180'den fazla ülkede 150 milyondan fazla öğrenciye ulaşan bu hareket, bilgisayar bilimini gizemden arındırarak sınıflara sokmayı başarmıştır.\n*   **Fırsat Eşitliği:** Kodlama eğitiminin sadece iyi finanse edilen okullara özgü bir \"posta kodu ayrıcalığı\" değil, evrensel bir erişim hakkı olması amaçlanmıştır.\n\n## 3. Code.org’dan CodeAI’ya: Büyük Dönüşüm\n\nHaziran 2026 itibarıyla kurumun adını **CodeAI** olarak değiştirmesi, eğitim paradigmasında yaşanan köklü bir kaymayı simgelemektedir. Bu dönüşüm, ABD'deki öğrencilerin %84'ünün yapay zekayı kullanırken sadece %16'sının okulda bu eğitimi alması arasındaki devasa uçurumu kapatmayı hedeflemektedir. Artık odak noktası sadece kodlama değil, \"Dijital Bilimler\" (Digital Sciences) olarak tanımlanan daha geniş bir disiplindir.\n\nBu yeni yapı; Yapay Zeka Bilimi, Bilgisayar Bilimi ve Veri Bilimi triadını **Etik ve Sorumlu Bilişim** ile **İnsan Odaklı Tasarım** temelleri üzerine inşa etmektedir.\n\n| Özellik | Eski Yapı (Code.org) | Yeni Yapı (CodeAI) |\n| :--- | :--- | :--- |\n| **Odak Noktası** | Genel Bilgisayar Programlama | Dijital Bilimler (AI, CS ve Veri Bilimi Entegrasyonu) |\n| **Temel Disiplin** | Bilgisayar Bilimi | AI Bilimi + Bilgisayar Bilimi + Veri Bilimi |\n| **Temel Değerler** | Kod Yazma ve Algoritmik Mantık | Etik, Sorumlu Bilişim ve İnsan-AI Etkileşimi |\n| **Küresel Hareket** | Hour of Code (Kodlama Saati) | Hour of AI (25 Milyon Öğrenci Hedefi) |\n\n## 4. CodeAI’nın Gelecek Hedefleri: Misyon ve Vizyon\n\nCodeAI, dijital akıcılığı \"öğrencinin teknolojiyi sadece kullanması değil; onu yönlendirmesi, nerede hata yapabileceğini anlaması ve etik sonuçlarını sorgulayabilmesi\" olarak görür. Bu vizyonun hayata geçmesi için kurum, lise düzeyinde \"Yapay Zeka Temelleri\" ve ortaokulda \"Yapay Zeka Keşifleri\" gibi kursları müfredata eklemiştir. CodeAI’nın dijital akıcılık için belirlediği 10 politika önerisinden en kritik 5 tanesi şunlardır:\n\n1.  **Eyalet/Ulusal Düzeyde Plan ve Okul Rehberliği:** Dijital bilimlerin K-12 eğitimine entegrasyonu için net stratejik hedefler ve uygulama destekleri oluşturulması.\n2.  **Mezuniyet Şartı Olarak Dijital Bilimler Kursu (Politika 5):** Her öğrencinin liseden mezun olabilmek için AI, CS ve Veri Bilimi kavramlarını içeren en az bir dijital bilimler dersini tamamlamış olmasının zorunlu hale getirilmesi.\n3.  **K-12 Dijital Bilim Standartları:** AI ve Veri Bilimi öğrenme beklentilerinin mevcut bilgisayar bilimi standartlarına entegre edilmesi.\n4.  **Eğitim Bakanlıklarında Uzman Kadrolar:** Politika entegrasyonu ve öğretim desteği için tam zamanlı \"Dijital Bilimler Liderliği\" pozisyonlarının kurulması.\n5.  **Öğretmen Profesyonel Gelişimi İçin Fon Sağlanması:** Yapay zeka ve bilgisayar bilimlerini öğretmek üzere öğretmenlerin sürekli eğitimine yönelik yıllık bütçe tahsisi.\n\n## 5. Türkiye’de Mevcut Durum: Yerel Girişimler ve İstatistikler\n\nTürkiye, teknoloji erişiminde yüksek bir ivme yakalamış olsa da \"Tüketim-Üretim Makası\" hala kritik bir sorundur. TÜİK 2024 verilerine göre çocuklarda internet kullanımı %91,3’e ulaşmış, ancak bu kullanımın %83,9’u video izleme, %72,7’si ise oyun oynama odaklı kalmıştır.\n\n**KodlaManisa’dan Kendin Yap Atölyelerine (DIY Workshops)**\n2015 yılında Manisa Valiliği ve MEB iş birliğiyle başlatılan **KodlaManisa**, Türkiye'nin bu alandaki ilk ve en kapsamlı yerel hareketidir.\n*   **Vizyoner Dönüşüm:** Bilişim öğretmenleri, okulun \"format atan teknisyeni\" rolünden sıyrılarak \"vizyoner eğitimci\" kimliğine bürünmüştür.\n*   **Evolüsyon:** KodlaManisa'nın yarattığı kurumsal hafıza ve altyapı, Zafer Kalkınma Ajansı'nın desteğiyle **\"Kendin Yap Atölyeleri\" (DIY Workshops)** projesine dönüşerek yeni bir modele evrilmiştir.\n*   **Stratejik Engeller:** Öğretmenlerin %91,2’si eğitimlere katılmasına rağmen, %70,6’sı programlama dillerindeki hızlı değişim nedeniyle kendisini \"kısmen yeterli\" görmektedir. Bu durum, teknik sözdizimi (syntax) yerine kavramsal AI anlayışına geçişin önemini kanıtlamaktadır.\n\n## 6. Türkiye Ne Yapmalı? Stratejik Öneriler\n\nTürkiye, KodlaManisa, KodlaRize ve Düzce Kodluyor gibi yerel başarılardan elde edilen deneyimi, CodeAI'nın küresel standartlarıyla harmanlayarak ulusal bir politikaya dönüştürmelidir.\n\n1.  **Müfredatın Yeniden Yapılandırılması:** Bilgisayar bilimi sadece bir bilişim dersi değil; fen, matematik ve sosyal bilimler ile entegre, disiplinlerarası bir **STEM+AI** modeli olarak kurgulanmalıdır.\n2.  **Öğretmen Eğitiminde Paradigma Değişimi:** Sürekli değişen programlama dillerinin teknik yükü yerine, öğretmenlere \"Dijital Bilimler\" (AI, CS, Veri Bilimi) pedagojisi ve etik kullanımı odağında kurumsal destek verilmelidir.\n3.  **Altyapı ve Sürdürülebilirlik:** Okul laboratuvarları, öğrencilerin tasarım odaklı düşünme becerilerini geliştirecek \"Kendin Yap Atölyeleri\" formatına dönüştürülmeli ve sanayi-okul iş birlikleriyle desteklenmelidir.\n4.  **Kurumsal Sertifikasyon ve Ödüllendirme:** Öğretmenlerin bireysel çabaları ve projelerdeki başarıları; resmi sertifikalar, kariyer basamaklarında tanınırlık ve kurumsal teşvik mekanizmalarıyla ödüllendirilmelidir.\n\n## 7. Sonuç: Geleceği Şekillendirme Sorumluluğu\n\nDijital yeterlilik ve yapay zeka akıcılığı, artık lüks bir beceri değil, okuma-yazma gibi temel bir haktır. Code.org’un CodeAI’ya dönüşümü, bilgisayar biliminin artık seçmeli bir hobi değil, geleceğin temel disiplini olduğunun ilanıdır. Türkiye, yerel projelerle kazandığı \"teknoloji üreten nesil\" motivasyonunu, her öğrenciye eşit fırsat sunan merkezi bir eğitim politikasıyla taçlandırmalıdır. Hedefimiz, gençlerimizin teknolojinin şekillendirdiği bir dünyada savrulmaları değil, o dünyayı şekillendiren mimarlar olmalarını sağlamaktır.\n\n---\n\n\u003e **Bu yazı hakkında**\n\u003e\n\u003e Bu makalenin temel fikri ve çıkış noktası tamamen kişisel merakıma dayanmaktadır. İçeriğin araştırılması, derlenmesi ve yapılandırılması süreçlerinde yapay zeka teknolojilerinden yararlanılmıştır. Bu yazı mutlak bir sonuç veya nihai bir doğru sunma amacı taşımamakta; aksine, ilham verici bir bilgi paylaşımı ve yeni okumalar için bir başlangıç noktası olarak değerlendirilmek üzere yayınlanmaktadır.","tags":["Bilgisayar Bilimi Eğitimi \u0026 CodeAI","Dijital Okuryazarlık"],"readTime":"4 dk","featured":false,"author":"Serhat Çetin","createdAt":"2026-09-25T18:18:35.004035Z","coverImage":"/uploads/cover-1790522050687-8e729a20.jpg","url":"/blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye"},{"id":"1","type":"video","title":"SD-LAN Nedir? ve Kullanım Alanları Nelerdir?","youtubeUrl":"https://www.youtube.com/watch?v=rOR6eyeNCcE","youtubeId":"rOR6eyeNCcE","featured":false,"tags":["YouTube","Video"],"author":"Serhat Çetin","createdAt":"2026-09-03T14:21:46.724Z","url":"https://www.youtube.com/watch?v=rOR6eyeNCcE"},{"id":"2","type":"video","title":"MetroEthernet: İşletmelere Özel Yüksek Hız","youtubeUrl":"https://www.youtube.com/watch?v=0gDfpvOOzIs","youtubeId":"0gDfpvOOzIs","featured":false,"tags":["YouTube","Video"],"author":"Serhat Çetin","createdAt":"2026-09-03T14:21:46.724Z","url":"https://www.youtube.com/watch?v=0gDfpvOOzIs"}],"total":8,"articlesCount":6,"videosCount":2}</script>
+<script src="/assets/article-render.js"></script>
+<script src="/assets/post-list.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const container = document.getElementById('postsContainer');
+    const searchInput = document.getElementById('searchInput');
+    const clearSearch = document.getElementById('clearSearch');
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const badgeAll = document.getElementById('badge-all');
+    const badgeArticle = document.getElementById('badge-article');
+    const badgeVideo = document.getElementById('badge-video');
+    const dataEl = document.getElementById('posts-data');
+
+    let allPosts = [];
+    let currentFilter = 'all';
+    let searchQuery = '';
+
+    function setBadges(total, articles, videos) {
+      if (badgeAll) badgeAll.textContent = total;
+      if (badgeArticle) badgeArticle.textContent = articles;
+      if (badgeVideo) badgeVideo.textContent = videos;
+    }
+
+    function setActiveTab(selectedFilter) {
+      currentFilter = selectedFilter;
+      filterTabs.forEach(tab => {
+        const f = tab.getAttribute('data-filter');
+        const badge = tab.querySelector('span:last-child');
+        if (f === selectedFilter) {
+          tab.className = 'filter-tab px-4 py-2 rounded-full font-label-md text-xs sm:text-sm font-semibold transition-all duration-200 bg-primary/15 text-primary border border-primary/30 shadow-[0_0_12px_rgba(56,189,248,0.25)] flex items-center gap-1.5 whitespace-nowrap';
+          if (badge) {
+            badge.className = 'ml-1 px-1.5 py-0.5 rounded-full text-[10px] bg-primary/20 text-primary border border-primary/30 font-mono-code';
+          }
+        } else {
+          tab.className = 'filter-tab px-4 py-2 rounded-full font-label-md text-xs sm:text-sm font-semibold transition-all duration-200 text-on-surface-variant hover:text-on-surface hover:bg-white/[0.06] border border-transparent flex items-center gap-1.5 whitespace-nowrap';
+          if (badge) {
+            badge.className = 'ml-1 px-1.5 py-0.5 rounded-full text-[10px] bg-[#1c2331] text-secondary border border-white/[0.08] font-mono-code';
+          }
+        }
+      });
+      renderFilteredPosts();
+    }
+
+    function applyFilter() {
+      const q = searchQuery.toLowerCase().trim();
+      return allPosts.filter(item => {
+        // Tab Filter
+        if (currentFilter !== 'all' && item.type !== currentFilter) {
+          return false;
+        }
+        // Search query
+        if (q) {
+          const matchTitle = (item.title || '').toLowerCase().includes(q);
+          const matchExcerpt = (item.excerpt || '').toLowerCase().includes(q);
+          const matchTags = Array.isArray(item.tags) && item.tags.some(t => String(t).toLowerCase().includes(q));
+          if (!matchTitle && !matchExcerpt && !matchTags) return false;
+        }
+        return true;
+      });
+    }
+
+    // Kart HTML'i tek kaynaktan gelir: /assets/post-list.js (sunucu da ayni dosyayi kullanir).
+    function renderFilteredPosts() {
+      container.innerHTML = PostList.renderList(applyFilter(), {
+        emptyMessage: 'Arama kriterlerinizi değiştirerek veya farklı bir kategori seçerek tekrar deneyebilirsiniz.'
+      });
+    }
+
+    // Event Listeners for Filters
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        setActiveTab(tab.getAttribute('data-filter'));
+      });
+    });
+
+    // Search Input Handler
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        if (clearSearch) {
+          clearSearch.classList.toggle('hidden', !searchQuery);
+        }
+        renderFilteredPosts();
+      });
+    }
+
+    if (clearSearch) {
+      clearSearch.addEventListener('click', () => {
+        searchInput.value = '';
+        searchQuery = '';
+        clearSearch.classList.add('hidden');
+        renderFilteredPosts();
+        searchInput.focus();
+      });
+    }
+
+    // 1) Sunucunun gomdugu veri (tercih edilen yol: ek istek yok, liste zaten basili)
+    let hasServerData = false;
+    if (dataEl) {
+      try {
+        const embedded = JSON.parse((dataEl.textContent || '').trim() || '{}');
+        if (Array.isArray(embedded.posts)) {
+          allPosts = embedded.posts;
+          setBadges(embedded.total || allPosts.length, embedded.articlesCount || 0, embedded.videosCount || 0);
+          hasServerData = true;
+        }
+      } catch (e) {
+        console.warn('Gömülü gönderi verisi okunamadı, API deneniyor:', e);
+      }
+    }
+
+    // Sunucu kartlari bastiysa ilk cizimi tekrarlamayiz (bos yere DOM yenilenmesin).
+    if (hasServerData) {
+      if (!container.querySelector('[data-post-id]')) renderFilteredPosts();
+      return;
+    }
+
+    // 2) Yedek yol: dogrudan /blog.html veya baska bir statik kopya
+    try {
+      const res = await fetch('/api/posts');
+      const data = await res.json();
+      allPosts = data.posts || [];
+      setBadges(data.total || allPosts.length, data.articlesCount || 0, data.videosCount || 0);
+      renderFilteredPosts();
+    } catch (e) {
+      console.error('Posts load error:', e);
+      container.innerHTML = `
+        <div class="p-space-xl rounded-2xl bg-surface-container-low border border-red-500/20 text-center py-12">
+          <p class="text-red-400 font-body-md">Gönderiler yüklenirken bir sorun oluştu. Lütfen sayfayı yenileyiniz.</p>
+        </div>
+      `;
+    }
+  });
+</script>
+
+<script src="/assets/lang-switch.js"></script>
+</body>
+</html>

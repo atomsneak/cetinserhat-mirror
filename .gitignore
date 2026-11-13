@@ -1,0 +1,4 @@
+# ayna çıktısı repoda yaşar; geçici dosyalar:
+*.pyc
+__pycache__/
+.ds_store
