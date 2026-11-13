@@ -159,10 +159,9 @@ a{color:#38bdf8;text-decoration:none}p{color:#94a3b8;max-width:32rem;line-height
 <p>Bu adres yedek kopyada yok.<br><a href="/">Ana sayfaya dön</a></p></div></body></html>"""
     )
 
-    # manifest (tazelik takibi için)
+    # manifest: commit'e giren dosya. Uçuşkan alan (zaman damgası) KOYMA —
+    # yoksa her çalıştırmada commit üretilir ve cron her gün mesaj atar.
     manifest = {
-        "generated_utc": subprocess.run(["date", "-u", "+%Y-%m-%dT%H:%M:%SZ"],
-                                        capture_output=True, text=True).stdout.strip(),
         "source": BASE,
         "pages": [{"url": u, "bytes": n, "file": f} for u, n, f in pages],
         "assets": got_assets + extra,
@@ -170,6 +169,16 @@ a{color:#38bdf8;text-decoration:none}p{color:#94a3b8;max-width:32rem;line-height
     }
     json.dump(manifest, open(os.path.join(SITE, "mirror-manifest.json"), "w"),
               indent=2, ensure_ascii=False)
+
+    # tazelik damgası yerelde tutulur (repoya girmez)
+    state_dir = os.path.expanduser("~/.hermes/state")
+    os.makedirs(state_dir, exist_ok=True)
+    stamp = subprocess.run(["date", "-u", "+%Y-%m-%dT%H:%M:%SZ"],
+                           capture_output=True, text=True).stdout.strip()
+    open(os.path.join(state_dir, "cetinserhat_mirror.last"), "w").write(
+        f"{stamp} pages={len(pages)} assets={got_assets + extra} "
+        f"bytes={sum(os.path.getsize(os.path.join(r, f)) for r, _, fs in os.walk(SITE) for f in fs)}\n"
+    )
 
     total = sum(os.path.getsize(os.path.join(r, f))
                 for r, _, fs in os.walk(SITE) for f in fs)
