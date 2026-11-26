@@ -3,12 +3,12 @@
   "pages": [
     {
       "url": "https://cetinserhat.com/",
-      "bytes": 87388,
+      "bytes": 87383,
       "file": "index.html"
     },
     {
       "url": "https://cetinserhat.com/blog",
-      "bytes": 161469,
+      "bytes": 162129,
       "file": "blog/index.html"
     },
     {
@@ -18,35 +18,35 @@
     },
     {
       "url": "https://cetinserhat.com/blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi",
-      "bytes": 91764,
+      "bytes": 91895,
       "file": "blog/noktasiz-bir-harf-dunyanin-yazilimini-nasil-kirdi/index.html"
     },
     {
       "url": "https://cetinserhat.com/blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar",
-      "bytes": 77678,
+      "bytes": 77809,
       "file": "blog/5g-ve-metro-ethernet-altyapilari-yeni-nesil-tasiyici-aglar/index.html"
     },
     {
       "url": "https://cetinserhat.com/blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik",
-      "bytes": 89414,
+      "bytes": 89545,
       "file": "blog/evren-milli-yapay-zeka-platformu-dijital-egemenlik/index.html"
     },
     {
       "url": "https://cetinserhat.com/blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor",
-      "bytes": 110484,
+      "bytes": 110615,
       "file": "blog/siseden-duvar-posetten-yol-plastik-atik-nasil-insaat-malzemesine-donusuyor/index.html"
     },
     {
       "url": "https://cetinserhat.com/blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka",
-      "bytes": 88062,
+      "bytes": 88193,
       "file": "blog/dijital-egemenlik-yarisi-washingtondan-ankaraya-yapay-zeka/index.html"
     },
     {
       "url": "https://cetinserhat.com/blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye",
-      "bytes": 76956,
+      "bytes": 77087,
       "file": "blog/code-orgdan-codeaiya-bilgisayar-bilimi-egitiminin-donusumu-ve-turkiye/index.html"
     }
   ],
-  "assets": 15,
+  "assets": 9,
   "failures": []
 }
