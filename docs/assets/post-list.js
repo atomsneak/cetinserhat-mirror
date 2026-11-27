@@ -118,7 +118,7 @@ ${coverBlock}
               </span>
 
               <div class="flex items-center gap-2 sm:gap-2.5 flex-nowrap shrink-0">
-                <a href="${url}?readmode=1" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
+                <a href="${url}#readmode" title="Dikkat dağıtıcı unsurlar olmadan Okuma Modunda aç" class="inline-flex items-center justify-center gap-1 sm:gap-space-xs px-3 sm:px-space-md py-1.5 sm:py-space-xs rounded-full bg-primary/10 hover:bg-primary text-primary hover:text-on-primary font-label-md text-xs sm:text-label-md font-semibold border border-primary/30 hover:border-transparent transition-all whitespace-nowrap shadow-sm">
                   <span class="material-symbols-outlined text-[15px] sm:text-[16px]">chrome_reader_mode</span>
                   <span>Okuma Modu</span>
                 </a>
